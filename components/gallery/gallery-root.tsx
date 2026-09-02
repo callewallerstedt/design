@@ -8,12 +8,12 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { GalleryApp, type GalleryMode } from "@/components/gallery/gallery-app"
 
 export function GalleryRoot() {
-  const [mode, setMode] = useState<GalleryMode>("light")
+  const [mode, setMode] = useState<GalleryMode>("dark")
 
   return (
     <ThemeProvider
       attribute="class"
-      defaultTheme="light"
+      defaultTheme="dark"
       enableSystem={false}
       disableTransitionOnChange
       forcedTheme={mode === "split" ? "light" : mode}

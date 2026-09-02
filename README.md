@@ -6,24 +6,17 @@ Point future coding agents at this repository instead of a list of inspiration l
 
 **Preview:** [https://design-callewallerstedts-projects.vercel.app](https://design-callewallerstedts-projects.vercel.app)
 
-## What this is
-
-Machina’s method ([thread](https://x.com/EXM7777/status/2092250905655812121)): frontend needs taste so it does not look like slop. Collect modules, build a lego of components, let agents edit real code.
-
-EP’s follow-up ([thread](https://x.com/eptwts/status/2092298910190448727)): send the agent a short list of UI resources. This repo **collapses those resources** into rules + owned code, rather than asking every agent to scrape the internet.
-
 ## For agents
 
-1. Read [`DESIGN.md`](./DESIGN.md) — taste, spacing, type, color, motion restraint, a11y, anti-slop.
-2. Follow [`AGENTS.md`](./AGENTS.md) / [`AGENT.md`](./AGENT.md).
-3. Prefer existing pieces:
+1. Read **[`TUTORIAL.md`](./TUTORIAL.md)** — Inter, 8px rounding, tight padding, greyscale + accent gradients.
+2. Then [`DESIGN.md`](./DESIGN.md) and [`AGENTS.md`](./AGENTS.md).
+3. Wrap product UI in `AppShell`. Prefer existing pieces:
 
 ```ts
+import { AppShell } from "@/components/kit/app-shell"
 import { Button } from "@/components/ui/button"
 import { Composer, ChatThread, ToolChip } from "@/components/kit"
 ```
-
-4. Do not paste Beautiful UI / ReUI / transitions.dev Pro source. Wrap primitives. Attribute new MIT copies in [`ATTRIBUTION.md`](./ATTRIBUTION.md).
 
 ## For humans
 
@@ -32,24 +25,21 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000). Use **Light / Dark / Split** in the header.
+- [http://localhost:3000](http://localhost:3000) — faux churn dashboard (sidebar, accents, tight cards)
+- [http://localhost:3000/kit](http://localhost:3000/kit) — component gallery (light / dark / split)
 
-```bash
-npm run build
-```
-
-Stack: Next.js App Router, TypeScript, Tailwind v4, shadcn/ui Nova + Base UI.
+Accent swatches in the sidebar: **Ember** (red–orange), **Sun** (yellow–orange), **Ice** (blue). Collapse from the header panel icon or the bottom of the sidebar; expand the same way, or click the **C** mark when the rail is collapsed.
 
 ## Kit map
 
 | Area | Path |
 | --- | --- |
+| Tutorial (start here) | `TUTORIAL.md` |
 | Design tokens | `app/globals.css` |
 | shadcn primitives | `components/ui/` |
-| Chat / agent pieces | `components/kit/` |
-| Gallery | `app/page.tsx`, `components/gallery/` |
-
-Chat pieces: message list, markdown bubble, composer, tool chips, status chips, thinking trace, approval card, task rows.
+| Shell + chat | `components/kit/` |
+| Faux dashboard | `components/dash/` |
+| Gallery | `app/kit/page.tsx` |
 
 ## Sources
 

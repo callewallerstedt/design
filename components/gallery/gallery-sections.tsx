@@ -123,13 +123,11 @@ import {
 
 function Section({
   id,
-  eyebrow,
   title,
   source,
   children,
 }: {
   id: string
-  eyebrow?: string
   title: string
   source?: string
   children: React.ReactNode
@@ -137,11 +135,6 @@ function Section({
   return (
     <section id={id} className="scroll-mt-16 border-t border-border py-10">
       <header className="mb-6">
-        {eyebrow ? (
-          <p className="mb-1 font-mono text-[11px] tracking-wide text-muted-foreground uppercase">
-            {eyebrow}
-          </p>
-        ) : null}
         <h2 className="text-xl font-medium tracking-tight">{title}</h2>
         {source ? (
           <p className="mt-1 text-xs text-muted-foreground">{source}</p>
@@ -169,7 +162,7 @@ function Stage({
         </p>
       ) : null}
       <div
-        className={`rounded-xl bg-card/40 p-4 ring-1 ring-foreground/8 ${className ?? ""}`}
+        className={`rounded-lg bg-card/40 p-2.5 ring-1 ring-foreground/8 ${className ?? ""}`}
       >
         {children}
       </div>
@@ -182,7 +175,6 @@ export function GallerySections() {
     <>
       <Section
         id="foundations"
-        eyebrow="01"
         title="Foundations"
         source="Tokens follow ui-skills parchment discipline + designsystemchecklist foundations."
       >
@@ -201,7 +193,7 @@ export function GallerySections() {
         </div>
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
           <Stage label="Type">
-            <p className="text-2xl font-medium tracking-tight">Geist medium, tight tracking</p>
+            <p className="text-2xl font-semibold tracking-tight">Inter semibold, 8px radius</p>
             <p className="mt-2 text-pretty text-sm text-muted-foreground">
               Body stays at the base size. Headings use text-balance. Data uses
               tabular-nums: <span className="tabular-nums">1,280.40</span>
@@ -230,13 +222,13 @@ export function GallerySections() {
 
       <Section
         id="primitives"
-        eyebrow="02"
         title="Primitives"
         source="MIT · shadcn/ui (Base UI Nova) — owned copies in components/ui."
       >
         <Stage label="Buttons">
           <div className="flex flex-wrap gap-2">
             <Button>Primary</Button>
+            <Button variant="brand">Brand</Button>
             <Button variant="secondary">Secondary</Button>
             <Button variant="outline">Outline</Button>
             <Button variant="ghost">Ghost</Button>
@@ -320,7 +312,6 @@ export function GallerySections() {
 
       <Section
         id="forms"
-        eyebrow="03"
         title="Forms"
         source="shadcn Field + Input. Errors sit next to the control. Never block paste."
       >
@@ -372,7 +363,6 @@ export function GallerySections() {
 
       <Section
         id="overlays"
-        eyebrow="04"
         title="Overlays"
         source="Base UI dialogs. Destructive actions use AlertDialog. Overlay motion stays ≤150ms."
       >
@@ -465,7 +455,6 @@ export function GallerySections() {
 
       <Section
         id="nav"
-        eyebrow="05"
         title="Navigation"
         source="Breadcrumbs, tabs, accordion, segmented control. Keyboard-first."
       >
@@ -536,7 +525,6 @@ export function GallerySections() {
 
       <Section
         id="feedback"
-        eyebrow="06"
         title="Feedback"
         source="Alerts, empty states, skeletons, toasts, progress. Empty states get one action."
       >
@@ -598,8 +586,7 @@ export function GallerySections() {
 
       <Section
         id="chat"
-        eyebrow="07"
-        title="AI chat"
+        title="Chat"
         source="Original wrappers. Pattern language from Beautiful UI; no third-party source was copied."
       >
         <Stage label="Thread + composer">
@@ -608,7 +595,7 @@ export function GallerySections() {
               <ChatMessage role="user" name="Calle">
                 Tighten the settings dialog. It feels loud.
               </ChatMessage>
-              <ToolChipStack summary="2 tool calls">
+              <ToolChipStack>
                 <ToolChip
                   kind="search"
                   name="Read"
@@ -679,8 +666,7 @@ export function GallerySections() {
 
       <Section
         id="motion"
-        eyebrow="08"
-        title="Motion restraint"
+        title="Motion"
         source="Emil Kowalski — You Don't Need Animations. UI Skills baseline-ui."
       >
         <div className="grid gap-3 sm:grid-cols-3">
@@ -712,32 +698,16 @@ export function GallerySections() {
 
       <Section
         id="rules"
-        eyebrow="09"
-        title="Agent entry"
+        title="Rules"
         source="Read DESIGN.md and AGENTS.md before writing UI."
       >
         <Card>
           <CardHeader>
-            <CardTitle>How to use this repo</CardTitle>
-            <CardDescription>
-              Future coding agents should consume the kit, not restyle from
-              scratch.
-            </CardDescription>
+            <CardTitle>Use the kit</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-2 text-sm leading-relaxed text-muted-foreground">
-            <p>
-              1. Read <code className="font-mono text-foreground">DESIGN.md</code>{" "}
-              for taste, spacing, type, color, motion, a11y, anti-slop.
-            </p>
-            <p>
-              2. Reuse <code className="font-mono text-foreground">components/ui</code>{" "}
-              primitives and <code className="font-mono text-foreground">components/kit</code>{" "}
-              for chat.
-            </p>
-            <p>
-              3. If a pattern is missing, wrap an existing primitive. Do not
-              invent a third button.
-            </p>
+          <CardContent className="space-y-1 text-sm text-muted-foreground">
+            <p>TUTORIAL.md then DESIGN.md.</p>
+            <p>Reuse ui + kit. Wrap, don’t invent.</p>
           </CardContent>
         </Card>
       </Section>

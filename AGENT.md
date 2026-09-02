@@ -1,3 +1,3 @@
 @AGENTS.md
 
-Read DESIGN.md before writing UI. Use components/ui and components/kit. Do not invent a parallel design system.
+Read TUTORIAL.md then DESIGN.md before writing UI. Inter, 8px radius, tight padding, greyscale + one accent. Minimal copy, no emojis. Use AppShell, components/ui, and components/kit.

@@ -5,7 +5,6 @@ import { useTheme } from "next-themes"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-import { SiteNav } from "@/components/kit/site-nav"
 import { GallerySections } from "@/components/gallery/gallery-sections"
 
 export type GalleryMode = "light" | "dark" | "split"
@@ -18,18 +17,10 @@ export function GalleryApp({
   onModeChange: (mode: GalleryMode) => void
 }) {
   return (
-    <div className="min-h-dvh bg-background text-foreground">
-      <SiteNav
-        trailing={
-          <ModeSwitch mode={mode} onModeChange={onModeChange} />
-        }
-      />
-      <div className="mx-auto flex w-full max-w-6xl gap-8 px-4 py-8 lg:px-6">
-        <aside className="sticky top-16 hidden h-fit w-44 shrink-0 lg:block">
-          <p className="mb-2 text-[11px] font-medium tracking-wide text-muted-foreground uppercase">
-            Kit
-          </p>
-          <nav className="flex flex-col gap-1 text-sm">
+    <div className="bg-background text-foreground">
+      <div className="mx-auto flex w-full max-w-6xl gap-6 px-3 py-5 lg:px-4">
+        <aside className="sticky top-3 hidden h-fit w-40 shrink-0 lg:block">
+          <nav className="flex flex-col gap-0.5 text-sm">
             {[
               ["#foundations", "Foundations"],
               ["#primitives", "Primitives"],
@@ -37,22 +28,25 @@ export function GalleryApp({
               ["#overlays", "Overlays"],
               ["#nav", "Navigation"],
               ["#feedback", "Feedback"],
-              ["#chat", "AI chat"],
+              ["#chat", "Chat"],
               ["#motion", "Motion"],
-              ["#rules", "Agent rules"],
+              ["#rules", "Rules"],
             ].map(([href, label]) => (
               <a
                 key={href}
                 href={href}
-                className="rounded-md px-2 py-1 text-muted-foreground hover:bg-muted hover:text-foreground"
+                className="rounded-lg px-2 py-1 text-muted-foreground hover:bg-muted hover:text-foreground"
               >
                 {label}
               </a>
             ))}
           </nav>
         </aside>
-        <main className="min-w-0 flex-1 pb-24">
-          <GalleryHero />
+        <main className="min-w-0 flex-1 pb-16">
+          <GalleryHero
+            mode={mode}
+            onModeChange={onModeChange}
+          />
           <GallerySections />
         </main>
       </div>
@@ -60,22 +54,23 @@ export function GalleryApp({
   )
 }
 
-function GalleryHero() {
+function GalleryHero({
+  mode,
+  onModeChange,
+}: {
+  mode: GalleryMode
+  onModeChange: (mode: GalleryMode) => void
+}) {
   return (
-    <section className="mb-14 max-w-2xl">
-      <p className="mb-3 font-mono text-[11px] tracking-wide text-muted-foreground uppercase">
-        Personal design system · for humans and agents
-      </p>
-      <h1 className="text-balance text-4xl font-medium tracking-tight sm:text-5xl">
-        Quiet interfaces. Sharp type. Almost no motion.
+    <section className="mb-8 max-w-2xl">
+      <div className="mb-3">
+        <ModeSwitch mode={mode} onModeChange={onModeChange} />
+      </div>
+      <h1 className="text-balance text-3xl font-semibold tracking-tight">
+        Kit
       </h1>
-      <p className="mt-4 text-pretty text-base leading-7 text-muted-foreground">
-        Calle&apos;s lego kit: taste rules in{" "}
-        <code className="rounded-md bg-muted px-1.5 py-0.5 font-mono text-[0.9em]">
-          DESIGN.md
-        </code>
-        , copy-own primitives from shadcn, and original AI-chat pieces. Point
-        future agents here instead of a pile of inspiration links.
+      <p className="mt-2 text-pretty text-sm text-muted-foreground">
+        TUTORIAL.md · DESIGN.md
       </p>
     </section>
   )
