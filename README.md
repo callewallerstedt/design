@@ -4,9 +4,7 @@ Personal design-template repo: **taste**, **rules**, and an **AI-ready component
 
 Point future coding agents at this repository instead of a list of inspiration links.
 
-**Preview:** https://design-callewallerstedts-projects.vercel.app
-
-> Live URL is filled in after the first Vercel deploy. If that host 404s, use the production URL printed in the latest GitHub / Vercel deployment.
+**Preview:** [https://design-callewallerstedts-projects.vercel.app](https://design-callewallerstedts-projects.vercel.app)
 
 ## What this is
 
