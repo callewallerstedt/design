@@ -46,10 +46,9 @@ Dense SaaS, not a marketing page.
 
 | Token | Value | Use |
 | --- | --- | --- |
-| Page gap | `gap-2` / `gap-3` | Dashboard grids |
-| Page padding | `p-3` | Main canvas |
-| Card padding | `--card-spacing` = 10px (`spacing(2.5)`) | `Card` default |
-| Dense card | `--card-spacing` = 8px (`size="sm"`) | KPI tiles |
+| Page gap | `gap-2` | Dashboard grids — same vertically and horizontally |
+| Page padding | `p-2` | Main canvas — same as the gap between cards |
+| Card padding | `--card-spacing` = 8px (`spacing(2)`) | All cards, all sides |
 | Control height | `h-8` | Buttons, inputs (Nova) |
 | Sidebar row | `h-8` | Nav items |
 
@@ -147,7 +146,7 @@ Hairline only: `ring-1 ring-foreground/10`. No drop shadows, no glow on the card
 
 1. Wrap in `AppShell`.
 2. Inter is already on `body`.
-3. Grid with `gap-2` and `p-3`.
+3. Grid with `gap-2` and `p-2` (same on every side).
 4. `Card` / `Card size="sm"` — do not restyle radius.
 5. Brand only through `variant="brand"`, `text-brand`, `bg-brand-gradient`.
 6. Check dark (default) and the three accent swatches.
@@ -164,4 +163,5 @@ Hairline only: `ring-1 ring-foreground/10`. No drop shadows, no glow on the card
 | `components/kit/app-shell.tsx` | Shell |
 | `components/kit/app-sidebar.tsx` | Expandable nav + accent picker |
 | `components/dash/churn-dashboard.tsx` | Faux dashboard reference |
+| `components/dash/ops-panels.tsx` | Chat, todo, and mail-in cards |
 | `DESIGN.md` | Full taste + a11y + anti-slop |

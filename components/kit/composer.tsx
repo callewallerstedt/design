@@ -12,11 +12,13 @@ export function Composer({
   onSubmit,
   disabled,
   className,
+  inputId = "composer-input",
 }: {
   placeholder?: string
   onSubmit?: (value: string) => void
   disabled?: boolean
   className?: string
+  inputId?: string
 }) {
   const [value, setValue] = useState("")
   const canSend = value.trim().length > 0 && !disabled
@@ -30,7 +32,7 @@ export function Composer({
   return (
     <form
       className={cn(
-        "rounded-xl bg-card p-2 ring-1 ring-foreground/10 focus-within:ring-ring/40",
+        "rounded-lg bg-card p-2 ring-1 ring-foreground/10 focus-within:ring-ring/40",
         className
       )}
       onSubmit={(event) => {
@@ -38,11 +40,11 @@ export function Composer({
         submit()
       }}
     >
-      <label className="sr-only" htmlFor="composer-input">
+      <label className="sr-only" htmlFor={inputId}>
         Message
       </label>
       <textarea
-        id="composer-input"
+        id={inputId}
         rows={2}
         value={value}
         disabled={disabled}

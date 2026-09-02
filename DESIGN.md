@@ -43,8 +43,8 @@ Never ship these unless Calle asks for them by name:
 
 See **TUTORIAL.md §3**. Short version:
 
-- Page: `p-3`, grids `gap-2`.
-- Cards: 10px padding (8px on `size="sm"`).
+- Page: `p-2`, grids `gap-2` — vertical and horizontal gutters match.
+- Cards: 8px padding on every side (`--card-spacing`).
 - Controls: `h-8`.
 - Sidebar rows: `h-8`.
 - Use `size-*` for squares.

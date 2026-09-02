@@ -12,6 +12,7 @@ import {
   ScoreRing,
   Sparkline,
 } from "@/components/dash/charts"
+import { OpsPanels } from "@/components/dash/ops-panels"
 
 const kpis = [
   {
@@ -100,7 +101,7 @@ const triggers = [
 
 export function ChurnDashboard() {
   return (
-    <div className="mx-auto flex w-full max-w-[1200px] flex-col gap-3 p-3">
+    <div className="mx-auto flex w-full max-w-[1200px] flex-col gap-2 p-2">
       <div className="flex flex-wrap items-end justify-between gap-2">
         <div>
           <p className="text-[10px] font-semibold tracking-wide text-brand uppercase">
@@ -157,7 +158,7 @@ export function ChurnDashboard() {
           <CardHeader>
             <CardTitle>Risk score distribution</CardTitle>
           </CardHeader>
-          <CardContent className="flex items-center gap-3">
+          <CardContent className="flex items-center gap-2">
             <RiskDonut high={614} medium={1288} low={940} />
             <ul className="space-y-1.5 text-xs">
               <LegendDot label="High" value="614" strong />
@@ -178,7 +179,7 @@ export function ChurnDashboard() {
               {subscribers.map((row) => (
                 <li
                   key={row.email}
-                  className="flex items-center gap-2 border-t border-border px-2.5 py-1.5 first:border-t-0"
+                  className="flex items-center gap-2 border-t border-border px-(--card-spacing) py-1.5 first:border-t-0"
                 >
                   <Avatar size="sm">
                     <AvatarFallback>
@@ -244,7 +245,9 @@ export function ChurnDashboard() {
         </Card>
       </section>
 
-      <Card className="flex flex-row items-center gap-3 p-2.5">
+      <OpsPanels />
+
+      <Card className="flex flex-row items-center gap-2 p-2">
         <div className="flex size-8 items-center justify-center rounded-lg bg-brand-soft text-brand">
           <BrainIcon className="size-4" />
         </div>
