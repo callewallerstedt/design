@@ -1,0 +1,6 @@
+---
+description: Calle design-system rules for UI work in this repo
+alwaysApply: true
+---
+
+Read DESIGN.md and AGENTS.md before writing or changing UI. Reuse components/ui and components/kit. No purple, glow, or ornamental motion.
