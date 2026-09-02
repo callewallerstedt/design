@@ -169,7 +169,7 @@ function Stage({
         </p>
       ) : null}
       <div
-        className={`rounded-xl bg-card/40 p-4 ring-1 ring-foreground/8 ${className ?? ""}`}
+        className={`rounded-lg bg-card/40 p-2.5 ring-1 ring-foreground/8 ${className ?? ""}`}
       >
         {children}
       </div>
@@ -201,7 +201,7 @@ export function GallerySections() {
         </div>
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
           <Stage label="Type">
-            <p className="text-2xl font-medium tracking-tight">Geist medium, tight tracking</p>
+            <p className="text-2xl font-semibold tracking-tight">Inter semibold, 8px radius</p>
             <p className="mt-2 text-pretty text-sm text-muted-foreground">
               Body stays at the base size. Headings use text-balance. Data uses
               tabular-nums: <span className="tabular-nums">1,280.40</span>
@@ -237,6 +237,7 @@ export function GallerySections() {
         <Stage label="Buttons">
           <div className="flex flex-wrap gap-2">
             <Button>Primary</Button>
+            <Button variant="brand">Brand</Button>
             <Button variant="secondary">Secondary</Button>
             <Button variant="outline">Outline</Button>
             <Button variant="ghost">Ghost</Button>
@@ -726,8 +727,9 @@ export function GallerySections() {
           </CardHeader>
           <CardContent className="space-y-2 text-sm leading-relaxed text-muted-foreground">
             <p>
-              1. Read <code className="font-mono text-foreground">DESIGN.md</code>{" "}
-              for taste, spacing, type, color, motion, a11y, anti-slop.
+              1. Read <code className="font-mono text-foreground">TUTORIAL.md</code>{" "}
+              then <code className="font-mono text-foreground">DESIGN.md</code>.
+              Inter, 8px, tight padding, greyscale + one accent.
             </p>
             <p>
               2. Reuse <code className="font-mono text-foreground">components/ui</code>{" "}

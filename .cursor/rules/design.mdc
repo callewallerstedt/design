@@ -3,4 +3,6 @@ description: Calle design-system rules for UI work in this repo
 alwaysApply: true
 ---
 
-Read DESIGN.md and AGENTS.md before writing or changing UI. Reuse components/ui and components/kit. No purple, glow, or ornamental motion.
+Read TUTORIAL.md then DESIGN.md before writing or changing UI.
+
+Hard rules: Inter (medium body, semibold headings), 8px rounding (`rounded-lg`), tight card padding, greyscale surfaces, one accent (`ember` | `sun` | `ice`) via CSS variables. Wrap product pages in AppShell. Reuse components/ui and components/kit.

@@ -1,5 +1,10 @@
-import { GalleryRoot } from "@/components/gallery/gallery-root"
+import { AppShell } from "@/components/kit/app-shell"
+import { ChurnDashboard } from "@/components/dash/churn-dashboard"
 
 export default function Home() {
-  return <GalleryRoot />
+  return (
+    <AppShell>
+      <ChurnDashboard />
+    </AppShell>
+  )
 }
