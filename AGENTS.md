@@ -25,6 +25,8 @@ This repository is a **design kit**, not a demo farm. When you write UI for Call
 
 - Restyle the token sheet to “make it pop”
 - Add purple, a second brand, or `rounded-2xl` chrome
+- Add emojis, eyebrows, Pro tips, or long helper copy
+- Dump third-party sites into `/components`
 - Dump third-party sites into `/components`
 - Mix another primitive system (Radix) into Base UI surfaces
 - Animate keyboard-driven or high-frequency actions

@@ -3,15 +3,14 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import {
+  ActivityIcon,
   BarChart3Icon,
   BellIcon,
   BookOpenIcon,
-  HelpCircleIcon,
   LayoutDashboardIcon,
   PanelLeftCloseIcon,
   PanelLeftOpenIcon,
   PanelsTopLeftIcon,
-  SparklesIcon,
   UsersIcon,
   WalletIcon,
 } from "lucide-react"
@@ -24,12 +23,12 @@ import { Separator } from "@/components/ui/separator"
 
 const nav = [
   { href: "/", label: "Overview", icon: LayoutDashboardIcon },
-  { href: "/#subscriptions", label: "Subscriptions", icon: WalletIcon },
+  { href: "/#subscriptions", label: "Subs", icon: WalletIcon },
   { href: "/#customers", label: "Customers", icon: UsersIcon },
   { href: "/#analytics", label: "Analytics", icon: BarChart3Icon },
-  { href: "/", label: "Churn Risk", icon: SparklesIcon, match: "churn" },
-  { href: "/kit", label: "Component kit", icon: PanelsTopLeftIcon },
-  { href: "/kit#rules", label: "Tutorial", icon: BookOpenIcon },
+  { href: "/", label: "Churn", icon: ActivityIcon, match: "churn" },
+  { href: "/kit", label: "Kit", icon: PanelsTopLeftIcon },
+  { href: "/kit#rules", label: "Rules", icon: BookOpenIcon },
 ]
 
 export function AppSidebar({
@@ -68,7 +67,6 @@ export function AppSidebar({
             </span>
             <div className="min-w-0">
               <p className="truncate text-sm font-semibold leading-none">Calle</p>
-              <p className="truncate text-[11px] text-muted-foreground">Design</p>
             </div>
           </>
         )}
@@ -104,24 +102,7 @@ export function AppSidebar({
         })}
       </nav>
 
-      {!collapsed ? (
-        <div className="mx-1.5 mb-2 rounded-lg bg-muted/60 p-2.5 ring-1 ring-foreground/8">
-          <p className="text-[11px] font-semibold">Pro tip</p>
-          <p className="mt-0.5 text-[11px] leading-snug text-muted-foreground">
-            One accent. Greyscale everything else.
-          </p>
-          <Button variant="brand" size="sm" className="mt-2 w-full">
-            Create flow
-          </Button>
-        </div>
-      ) : null}
-
       <div className={cn("flex flex-col gap-1 px-1.5 pb-2", collapsed && "items-center")}>
-        {!collapsed ? (
-          <p className="px-1 text-[10px] font-semibold tracking-wide text-muted-foreground uppercase">
-            Accent
-          </p>
-        ) : null}
         <div className={cn("flex gap-1", collapsed ? "flex-col" : "px-1")}>
           {accents.map((id) => (
             <AccentSwatch
@@ -134,17 +115,6 @@ export function AppSidebar({
           ))}
         </div>
         <Separator className="my-1" />
-        {!collapsed ? (
-          <Button
-            variant="ghost"
-            size="sm"
-            className="justify-start text-muted-foreground"
-            aria-label="Help center"
-          >
-            <HelpCircleIcon />
-            Help center
-          </Button>
-        ) : null}
         <Button
           variant={collapsed ? "outline" : "ghost"}
           size={collapsed ? "icon-sm" : "sm"}
@@ -224,10 +194,10 @@ export function AppHeader({
       </Button>
       <div className="ml-auto flex items-center gap-1.5">
         <Button variant="outline" size="sm">
-          Last 30 days
+          30d
         </Button>
         <Button variant="outline" size="sm">
-          Filters
+          Filter
         </Button>
         <Button variant="ghost" size="icon-sm" aria-label="Notifications">
           <BellIcon />

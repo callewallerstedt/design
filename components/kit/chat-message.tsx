@@ -37,12 +37,9 @@ export function ChatMessage({
           isUser ? "items-end text-right" : "items-start"
         )}
       >
-        <p className="mb-1 text-[11px] font-medium text-muted-foreground">
-          {name ?? (isUser ? "You" : "Assistant")}
-        </p>
         <div
           className={cn(
-            "rounded-xl px-3.5 py-2.5 text-left text-sm leading-relaxed",
+            "rounded-lg px-2.5 py-2 text-left text-sm leading-snug",
             isUser
               ? "bg-primary text-primary-foreground"
               : "bg-card ring-1 ring-foreground/10"

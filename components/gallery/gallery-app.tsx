@@ -20,9 +20,6 @@ export function GalleryApp({
     <div className="bg-background text-foreground">
       <div className="mx-auto flex w-full max-w-6xl gap-6 px-3 py-5 lg:px-4">
         <aside className="sticky top-3 hidden h-fit w-40 shrink-0 lg:block">
-          <p className="mb-1.5 text-[10px] font-semibold tracking-wide text-muted-foreground uppercase">
-            Kit
-          </p>
           <nav className="flex flex-col gap-0.5 text-sm">
             {[
               ["#foundations", "Foundations"],
@@ -31,9 +28,9 @@ export function GalleryApp({
               ["#overlays", "Overlays"],
               ["#nav", "Navigation"],
               ["#feedback", "Feedback"],
-              ["#chat", "AI chat"],
+              ["#chat", "Chat"],
               ["#motion", "Motion"],
-              ["#rules", "Agent rules"],
+              ["#rules", "Rules"],
             ].map(([href, label]) => (
               <a
                 key={href}
@@ -66,25 +63,14 @@ function GalleryHero({
 }) {
   return (
     <section className="mb-8 max-w-2xl">
-      <div className="mb-3 flex flex-wrap items-center gap-2">
-        <p className="font-mono text-[11px] tracking-wide text-muted-foreground uppercase">
-          Component gallery
-        </p>
+      <div className="mb-3">
         <ModeSwitch mode={mode} onModeChange={onModeChange} />
       </div>
       <h1 className="text-balance text-3xl font-semibold tracking-tight">
-        Inter, 8px, greyscale, one accent.
+        Kit
       </h1>
-      <p className="mt-3 text-pretty text-sm leading-6 text-muted-foreground">
-        Follow{" "}
-        <code className="rounded-lg bg-muted px-1.5 py-0.5 font-mono text-[0.9em]">
-          TUTORIAL.md
-        </code>{" "}
-        and{" "}
-        <code className="rounded-lg bg-muted px-1.5 py-0.5 font-mono text-[0.9em]">
-          DESIGN.md
-        </code>
-        . Homepage is the faux dashboard. This page is the lego kit.
+      <p className="mt-2 text-pretty text-sm text-muted-foreground">
+        TUTORIAL.md · DESIGN.md
       </p>
     </section>
   )

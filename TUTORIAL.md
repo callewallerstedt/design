@@ -19,8 +19,7 @@ The live example is the faux dashboard at `/`. The component gallery is `/kit`.
 - Do not switch to Geist, Inter Display, serif display, or a second sans.
 
 ```tsx
-<h1 className="text-2xl font-semibold tracking-tight">Predictive churn flagging</h1>
-<p className="text-sm text-muted-foreground">AI-powered insights…</p>
+<h1 className="text-2xl font-semibold tracking-tight">Churn</h1>
 <p className="text-2xl font-semibold tabular-nums">2,842</p>
 ```
 
@@ -81,7 +80,7 @@ Chroma lives in **one** accent, switched with `data-accent` on `<html>`:
 Set it with `useAccent()` / the sidebar swatches. Never hard-code orange hex in a component.
 
 ```tsx
-<Button variant="brand">View recommended actions</Button>
+<Button variant="brand">Open</Button>
 <span className="text-brand">↑ 18.6%</span>
 <div className="bg-brand-gradient" />
 ```
@@ -142,7 +141,20 @@ Hairline only: `ring-1 ring-foreground/10`. No drop shadows, no glow on the card
 
 ---
 
-## 8. Copy-paste order for a new screen
+## 8. Copy
+
+Minimal text. Icons stay. No emojis.
+
+- One-word titles when they still parse: `Churn`, `Chat`, `Mail`, `Kit`.
+- No eyebrows, kickers, overlines, numbered `01` labels, or `uppercase tracking-wide` microcopy.
+- No “Pro tip”, “AI insight”, “Live”, “Help center”, or keyboard-hint paragraphs.
+- Buttons: `Open`, `Filter`, `30d` — not “View recommended actions”.
+- Lucide icons, `size-4`, muted unless active. No decorative wells, sparkles, or emoji.
+- `aria-label` on icon-only controls. Visible UI stays short.
+
+---
+
+## 9. Copy-paste order for a new screen
 
 1. Wrap in `AppShell`.
 2. Inter is already on `body`.

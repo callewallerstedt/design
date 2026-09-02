@@ -68,9 +68,7 @@ export function ToolChipStack({
   return (
     <div className={cn("flex flex-col gap-1.5", className)}>
       {summary ? (
-        <p className="text-[11px] font-medium tracking-wide text-muted-foreground uppercase">
-          {summary}
-        </p>
+        <p className="text-[11px] text-muted-foreground">{summary}</p>
       ) : null}
       <div className="flex flex-wrap gap-1.5">{children}</div>
     </div>

@@ -23,6 +23,7 @@ The faux dashboard at `/` is the visual source of truth. `/kit` is the component
 - Elevation is a hairline ring (`ring-1 ring-foreground/10`). No card glow.
 - Radius is **8px** everywhere (`--radius: 8px`, use `rounded-lg`).
 - Empty states get **one** next action.
+- Copy is **minimal**. Icons are fine; keep them `size-4` and muted. No emojis, eyebrows, or helper badges.
 
 ## Anti-slop
 
@@ -37,7 +38,10 @@ Never ship these unless Calle asks for them by name:
 - `h-screen` (use `h-dvh`)
 - Mixing Radix and Base UI in the same interaction
 - Rebuilding keyboard behavior by hand
-- New primitive when `components/ui` or `components/kit` already has one
+- Emojis, sparkles-as-brand, or “AI insight” banners
+- Eyebrows / overlines / `01` section numbers / Pro tip cards
+- Keyboard-hint microcopy next to a composer
+- Long button labels (“View recommended actions”)
 
 ## Spacing & layout
 
@@ -53,6 +57,7 @@ See **TUTORIAL.md §3**. Short version:
 ## Typography
 
 - Inter only for UI.
+- Copy is short. No emojis. No eyebrow labels.
 - `text-balance` on headings, `text-pretty` on body.
 - `tabular-nums` for data.
 - `truncate` / `line-clamp` in dense UI.
