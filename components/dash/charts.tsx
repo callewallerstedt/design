@@ -6,12 +6,12 @@ function BrandGradientDefs({ id }: { id: string }) {
   return (
     <defs>
       <linearGradient id={id} x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stopColor="var(--brand-from)" />
-        <stop offset="100%" stopColor="var(--brand-to)" />
+        <stop offset="0%" stopColor="var(--chart-1)" />
+        <stop offset="100%" stopColor="var(--chart-2)" />
       </linearGradient>
       <linearGradient id={`${id}-fill`} x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stopColor="var(--brand)" stopOpacity="0.28" />
-        <stop offset="100%" stopColor="var(--brand)" stopOpacity="0" />
+        <stop offset="0%" stopColor="var(--chart-1)" stopOpacity="0.28" />
+        <stop offset="100%" stopColor="var(--chart-1)" stopOpacity="0" />
       </linearGradient>
     </defs>
   )
@@ -159,8 +159,8 @@ export function RiskDonut({
   const radius = 42
   const circ = 2 * Math.PI * radius
   const segs = [
-    { value: high, color: "var(--brand)" },
-    { value: medium, color: "color-mix(in oklch, var(--brand) 55%, white)" },
+    { value: high, color: "var(--chart-1)" },
+    { value: medium, color: "color-mix(in oklch, var(--chart-1) 55%, white)" },
     { value: low, color: "color-mix(in oklch, var(--foreground) 22%, transparent)" },
   ]
   let offset = 0
@@ -245,7 +245,7 @@ export function ScoreRing({ score }: { score: number }) {
         cy="18"
         r={radius}
         fill="none"
-        stroke="var(--brand)"
+        stroke="var(--chart-1)"
         strokeWidth="3"
         strokeDasharray={`${filled} ${circ - filled}`}
         transform="rotate(-90 18 18)"

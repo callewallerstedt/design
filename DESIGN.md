@@ -2,7 +2,7 @@
 
 Calle’s design language for product UI. **Agents: read this file, search [`catalog/components.json`](./catalog/components.json), open `local_path`, apply the tokens.**
 
-Greyscale SaaS. Inter. 6px corners, 8px ceiling. Tight padding. White accent on near-black. Dark by default.
+Minimalist, engineered, sharp, quiet. Geist Mono. Dark greyscale. No borders, no shadows. White only for focus and the active item.
 
 The faux dashboard at `/` is the visual source of truth. `/kit` is the component gallery.
 
@@ -16,12 +16,11 @@ The faux dashboard at `/` is the visual source of truth. `/kit` is the component
 
 ## Taste
 
-- **Inter** for all UI. `font-medium` on body, `font-semibold` on headings, buttons, and metrics.
-- Geist Mono for code, commands, identifiers.
-- Palette is **total greyscale**. No colored brand hues.
-- Accent is **white** in dark mode and **near-black** in light mode (`--brand`). Not a second hue.
-- Elevation is a hairline ring (`ring-1 ring-foreground/10`). No card glow.
-- Radius is **6px** (`--radius: 6px`, `rounded-lg`). Nothing rounds past **8px**.
+- **Geist Mono** for all UI, including body copy. `font-medium` on body, `font-semibold` on headings and buttons.
+- Palette is **layered greys**. Page is near-black. Cards and inputs are one step lighter. Hover is one step lighter again.
+- **No borders and no shadows** by default. Do not use `border`, `ring-1`, or `shadow-*` to separate surfaces.
+- White is the accent **only** for the focus ring and the active tab or nav item. Buttons stay grey.
+- Radius is **6px** (`rounded-lg`).
 - Empty states get **one** next action.
 - Copy is **minimal**. Icons are fine; keep them `size-4` and muted. No emojis, eyebrows, or helper badges.
 
@@ -47,16 +46,16 @@ Never ship these unless Calle asks for them by name:
 
 See **TUTORIAL.md §3**. Short version:
 
-- Page: `p-2`, grids `gap-2` — vertical and horizontal gutters match.
-- Cards: 8px padding on every side (`--card-spacing`).
-- Controls: `h-8`.
-- Sidebar rows: `h-8`.
+- Page: `p-1`, grids `gap-1` (4px).
+- Cards: 4px padding (`--card-spacing`).
+- Controls: `h-7` (28px).
+- Sidebar rows: `h-7`.
 - Use `size-*` for squares.
 - Z-index scale (`lib/z-index.ts`): base 0, sticky 20, overlay 50, toast 60.
 
 ## Typography
 
-- Inter only for UI.
+- Geist Mono only for UI.
 - Copy is short. No emojis. No eyebrow labels.
 - `text-balance` on headings, `text-pretty` on body.
 - `tabular-nums` for data.
@@ -67,13 +66,16 @@ See **TUTORIAL.md §3**. Short version:
 
 | Token | Use |
 | --- | --- |
-| `--background` / `--card` | Greyscale surfaces |
-| `--foreground` / `--muted-foreground` | Text |
-| `--brand` / `--brand-from` / `--brand-to` | White on dark, near-black on light |
-| `--brand-foreground` | Text on brand fills |
-| `--destructive` | Irreversible / error. The only chroma. |
+| `--background` | Near-black page |
+| `--sidebar` | One step off the page |
+| `--card` / `--popover` | Raised surface |
+| `--muted` / `--secondary` | Inputs and quiet fills |
+| `--accent` | Hover surface, one step lighter |
+| `--foreground` | Text |
+| `--ring` | White focus ring in dark mode |
+| `--destructive` | Irreversible error only |
 
-Dark is the default. Light stays greyscale so contrast holds. Do not add ember, sun, ice, purple, or a second accent.
+Do not add colored brand hues. A button is never white.
 
 ## Motion
 
@@ -82,7 +84,9 @@ From Emil Kowalski, *You Don’t Need Animations*, plus UI Skills `baseline-ui`:
 1. **Purpose first.** Animate to explain, orient, or confirm.
 2. Sidebar expand is allowed (150ms). Keyboard actions: never animate.
 3. UI motion ≤ 200ms. Compositor props preferred.
-4. Honor `prefers-reduced-motion`.
+4. Honor `prefers-reduced-motion`. The spotlight border and skeleton shimmer both turn off.
+5. **Spotlight border.** On hover, a 1px highlight follows the cursor. Use `Spotlight` or `useCursorBorder` from `components/kit/spotlight.tsx`. It sets `--x` and `--y` and fades in 150ms. Apply it to cards, buttons, and list items.
+6. **Skeleton shimmer.** Loading placeholders use `Skeleton` (`skeleton-shimmer` in `app/globals.css`). Soft, grey, no color.
 
 ## Accessibility
 
@@ -104,22 +108,25 @@ From Emil Kowalski, *You Don’t Need Animations*, plus UI Skills `baseline-ui`:
 
 ## Restyle EasyUI and BoardUI
 
-Their defaults are not Calle’s. After you import a file:
+Their defaults are not Calle’s. After you import a file from `components/external`:
 
-- Point surfaces at `--background`, `--card`, `--muted`, `--foreground`, `--border`.
-- Accent is white (`bg-primary` / `text-primary`) in dark mode. Strip rainbow, neon, purple, and glow.
-- Radius stays `rounded-lg` (6px). Do not leave `rounded-2xl` or `rounded-3xl`. This repo caps `--radius-xl` and above at 8px.
-- Padding is `p-2` and `gap-2`. Controls stay `h-8`. Replace `p-6` / `p-8`.
+- Delete `border`, `ring`, `shadow`, and hardcoded hex fills. Separate with `bg-background`, `bg-card`, `bg-muted`, and `hover:bg-accent`.
+- Buttons stay `bg-secondary text-foreground`. Do not leave white, rainbow, neon, or purple fills.
+- Focus uses `focus-visible:ring-2 focus-visible:ring-ring` (white in dark mode). Active nav or tabs use `bg-accent text-white`.
+- Radius stays `rounded-lg` (6px). Replace `rounded-2xl` and `rounded-3xl`.
+- Padding is `p-1` and `gap-1`. Controls are `h-7`. Replace `p-6` / `p-8` and `h-10`+.
+- Wrap the root in `Spotlight` if it is a card, button, or row.
 - EasyUI motion stays off unless the task asks for it.
 - Do not import `components/external/boardui/styles/globals.css` over `app/globals.css`.
-- Pro items stop at the catalog. Do not paste paid source.
+- BoardUI Pro is not in this repo. The catalog links to it. Do not paste paid source.
 
 ## Checklist before shipping UI
 
-- [ ] Inter, semibold headings, medium body
-- [ ] 6px radius (`rounded-lg`), nothing over 8px
-- [ ] Tight padding (no `p-6` cards)
-- [ ] Greyscale surfaces; white accent on dark
-- [ ] Dark default still readable in light
+- [ ] Geist Mono everywhere
+- [ ] 6px radius, 4px gaps, 28px controls
+- [ ] No borders, no shadows; layers of grey
+- [ ] White only on focus ring and the active item
+- [ ] Spotlight border on cards, buttons, and rows
+- [ ] Skeleton shimmer for loading
 - [ ] Keyboard + visible focus
 - [ ] Reused an existing primitive

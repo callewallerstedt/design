@@ -20,13 +20,13 @@ This repository is a **design kit**, not a demo farm. When you write UI for Call
 2. Reuse `components/ui/*` and `components/kit/*` before inventing markup. If the pattern is missing, search the catalog and import `local_path` from `components/external`.
 3. Product screens wrap in `AppShell`. For AI surfaces, reuse `components/kit/*`.
 4. If a pattern is missing, **wrap** an existing primitive. Do not add a second button.
-5. Keep motion off unless the task asks for it. Sidebar collapse is the exception (150ms).
+5. Keep motion off unless the task asks for it. Exceptions: sidebar collapse (150ms), the spotlight border fade, and skeleton shimmer. Honor `prefers-reduced-motion`.
 6. Attribute any copied open-source snippet in [`ATTRIBUTION.md`](./ATTRIBUTION.md). Do not paste closed-source galleries (Beautiful UI, Rare UI marketing, ReUI paid blocks, transitions.dev Pro).
 
 ## Do not
 
 - Restyle the token sheet to “make it pop”
-- Add purple, a second brand, or `rounded-2xl` chrome
+- Add borders, shadows, purple, a white button, or `rounded-2xl` chrome
 - Add emojis, eyebrows, Pro tips, or long helper copy
 - Paste BoardUI Pro or other paid source into this repo
 - Mix another primitive system (Radix) into Base UI surfaces

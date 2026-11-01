@@ -2,7 +2,7 @@
 
 Read this before drawing any screen. Then read [`DESIGN.md`](./DESIGN.md) for the longer taste file.
 
-This is the checklist future agents should follow: **Inter**, **6px rounding**, **tight padding**, **greyscale + white accent**.
+This is the checklist future agents should follow: **Geist Mono**, **6px rounding**, **4px gaps**, **layered greys**, **white only on focus and the active item**.
 
 The live example is the faux dashboard at `/`. The component gallery is `/kit`.
 
@@ -10,13 +10,12 @@ The live example is the faux dashboard at `/`. The component gallery is `/kit`.
 
 ## 1. Type
 
-- **Font:** Inter. Always. Loaded in `app/layout.tsx` as `--font-inter`.
-- **Body:** `font-medium` (500). Slightly bolder than default UI.
+- **Font:** Geist Mono. Always. Loaded in `app/layout.tsx` as `--font-geist-mono` and used for sans and mono.
+- **Body:** `font-medium` (500).
 - **Headings / numbers / buttons:** `font-semibold` (600).
-- **Mono:** Geist Mono for code, chips, elapsed time.
 - **Data:** `tabular-nums`.
 - **Headings:** `text-balance`. Body: `text-pretty`.
-- Do not switch to Geist, Inter Display, serif display, or a second sans.
+- Do not switch to Inter, Inter Display, or a second face.
 
 ```tsx
 <h1 className="text-2xl font-semibold tracking-tight">Churn</h1>
@@ -45,17 +44,18 @@ Dense SaaS, not a marketing page.
 
 | Token | Value | Use |
 | --- | --- | --- |
-| Page gap | `gap-2` | Dashboard grids — same vertically and horizontally |
-| Page padding | `p-2` | Main canvas — same as the gap between cards |
-| Card padding | `--card-spacing` = 8px (`spacing(2)`) | All cards, all sides |
-| Control height | `h-8` | Buttons, inputs (Nova) |
-| Sidebar row | `h-8` | Nav items |
+| Page gap | `gap-1` | 4px, both axes |
+| Page padding | `p-1` | Main canvas |
+| Card padding | `--card-spacing` = 4px | All cards, all sides |
+| Control height | `h-7` | 28px buttons and inputs |
+| Sidebar row | `h-7` | Nav items |
 
 **Do**
 
-- Pack KPI cards in one row with `gap-2`.
-- Keep list rows at `py-1.5`.
-- Prefer `gap-2` over `gap-6` inside cards.
+- Pack KPI cards in one row with `gap-1`.
+- Keep list rows at `h-7`.
+- Prefer `gap-1` over `gap-2` inside cards.
+- Separate surfaces with background steps, not borders.
 
 **Do not**
 
@@ -67,17 +67,14 @@ Dense SaaS, not a marketing page.
 
 ## 4. Color — greyscale, white accent
 
-Surfaces, text, borders: **no chroma**. Near-black canvas, layered greys, white text.
+Surfaces are greys stacked on a near-black page. No borders. No shadows.
 
-The accent is white in dark mode and near-black in light mode (`--brand`). No ember, sun, ice, or purple.
+White appears on the focus ring (`--ring`) and on the active nav item or tab (`text-white` on `bg-accent`). Buttons use `bg-secondary`.
 
 ```tsx
-<Button variant="brand">Open</Button>
-<span className="text-brand">↑ 18.6%</span>
-<div className="bg-brand-gradient" />
+<Button>Open</Button>
+<Button variant="brand">Active</Button>
 ```
-
-Primary CTAs use `--brand`. Destructive red is the only chroma, and only for irreversible actions.
 
 ---
 

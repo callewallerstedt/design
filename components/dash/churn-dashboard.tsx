@@ -94,10 +94,10 @@ const triggers = [
 
 export function ChurnDashboard() {
   return (
-    <div className="mx-auto flex w-full max-w-[1200px] flex-col gap-2 p-2">
+    <div className="mx-auto flex w-full max-w-[1200px] flex-col gap-1 p-1">
       <h1 className="text-2xl font-semibold tracking-tight">Churn</h1>
 
-      <section className="grid gap-2 sm:grid-cols-2 xl:grid-cols-4">
+      <section className="grid gap-1 sm:grid-cols-2 xl:grid-cols-4">
         {kpis.map((kpi) => (
           <Card key={kpi.label} size="sm">
             <CardHeader className="pb-0">
@@ -105,10 +105,10 @@ export function ChurnDashboard() {
                 {kpi.label}
               </CardTitle>
             </CardHeader>
-            <CardContent className="flex items-end justify-between gap-2">
+            <CardContent className="flex items-end justify-between gap-1">
               <div>
                 <p className="text-2xl font-semibold tabular-nums">{kpi.value}</p>
-                <p className="mt-0.5 flex items-center gap-0.5 text-xs font-semibold text-brand">
+                <p className="mt-0.5 flex items-center gap-0.5 text-xs font-semibold text-foreground">
                   <ArrowUpRightIcon className="size-3" />
                   {kpi.delta}
                 </p>
@@ -119,11 +119,11 @@ export function ChurnDashboard() {
         ))}
       </section>
 
-      <section id="analytics" className="grid gap-2 lg:grid-cols-3">
+      <section id="analytics" className="grid gap-1 lg:grid-cols-3">
         <Card className="lg:col-span-2">
           <CardHeader className="flex-row items-center justify-between">
             <CardTitle>Retention</CardTitle>
-            <p className="text-sm font-semibold tabular-nums text-brand">91.4%</p>
+            <p className="text-sm font-semibold tabular-nums text-foreground">91.4%</p>
           </CardHeader>
           <CardContent className="h-52">
             <RetentionChart
@@ -136,7 +136,7 @@ export function ChurnDashboard() {
           <CardHeader>
             <CardTitle>Risk</CardTitle>
           </CardHeader>
-          <CardContent className="flex items-center gap-2">
+          <CardContent className="flex items-center gap-1">
             <RiskDonut high={614} medium={1288} low={940} />
             <ul className="space-y-1.5 text-xs">
               <LegendDot label="High" value="614" strong />
@@ -147,7 +147,7 @@ export function ChurnDashboard() {
         </Card>
       </section>
 
-      <section id="customers" className="grid gap-2 lg:grid-cols-3">
+      <section id="customers" className="grid gap-1 lg:grid-cols-3">
         <Card className="lg:col-span-2">
           <CardHeader>
             <CardTitle>At risk</CardTitle>
@@ -157,7 +157,7 @@ export function ChurnDashboard() {
               {subscribers.map((row) => (
                 <li
                   key={row.email}
-                  className="flex items-center gap-2 border-t border-border px-(--card-spacing) py-1.5 first:border-t-0"
+                  className="flex items-center gap-1 border-t border-border px-(--card-spacing) py-1.5 first:border-t-0"
                 >
                   <Avatar size="sm">
                     <AvatarFallback>
@@ -194,7 +194,7 @@ export function ChurnDashboard() {
             {triggers.map((trigger) => (
               <div
                 key={trigger.title}
-                className="flex items-center gap-2 rounded-lg bg-muted/50 px-2 py-1.5 ring-1 ring-foreground/6"
+                className="flex items-center gap-1 rounded-lg bg-muted/50 px-2 py-1.5 bg-muted"
               >
                 <p
                   className={
@@ -205,7 +205,7 @@ export function ChurnDashboard() {
                 >
                   {trigger.title}
                 </p>
-                <p className="text-lg font-semibold tabular-nums text-brand">
+                <p className="text-lg font-semibold tabular-nums text-foreground">
                   {trigger.count}
                 </p>
               </div>
@@ -216,12 +216,12 @@ export function ChurnDashboard() {
 
       <OpsPanels />
 
-      <Card className="flex flex-row items-center gap-2 p-2">
-        <InfoIcon className="size-4 shrink-0 text-brand" />
+      <Card className="flex flex-row items-center gap-1 p-2">
+        <InfoIcon className="size-4 shrink-0 text-foreground" />
         <p className="min-w-0 flex-1 text-sm">
           Payment failures churn 3.4×. Pause dunning 7d.
         </p>
-        <Button variant="brand" size="sm">
+        <Button size="sm">
           Open
         </Button>
       </Card>
@@ -241,15 +241,15 @@ function LegendDot({
   muted?: boolean
 }) {
   return (
-    <li className="flex items-center gap-2">
+    <li className="flex items-center gap-1">
       <span
         className="size-2 rounded-full"
         style={{
           background: strong
-            ? "var(--brand)"
+            ? "var(--chart-1)"
             : muted
               ? "color-mix(in oklch, var(--foreground) 22%, transparent)"
-              : "color-mix(in oklch, var(--brand) 55%, white)",
+              : "color-mix(in oklch, var(--chart-1) 55%, white)",
         }}
       />
       <span className="text-muted-foreground">{label}</span>

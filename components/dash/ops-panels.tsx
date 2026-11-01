@@ -66,7 +66,7 @@ const mailIns = [
 
 export function OpsPanels() {
   return (
-    <section className="grid gap-2 lg:grid-cols-3">
+    <section className="grid gap-1 lg:grid-cols-3">
       <ChatPanel />
       <TodoPanel />
       <MailInPanel />
@@ -83,13 +83,13 @@ function ChatPanel() {
         <CardTitle>Chat</CardTitle>
       </CardHeader>
       <CardContent className="min-h-0 flex-1 px-0">
-        <ChatThread className="h-48 gap-2 px-(--card-spacing) py-0">
+        <ChatThread className="h-48 gap-1 px-(--card-spacing) py-0">
           {messages.map((message, index) => (
             <ChatMessage
               key={`${message.role}-${index}`}
               role={message.role}
               name={message.name}
-              className="gap-2"
+              className="gap-1"
             >
               {message.text}
             </ChatMessage>
@@ -125,7 +125,7 @@ function TodoPanel() {
         {todos.map((todo) => (
           <label
             key={todo.id}
-            className="flex cursor-pointer items-center gap-2 rounded-lg px-(--card-spacing) py-1.5 hover:bg-muted/50"
+            className="flex cursor-pointer items-center gap-1 rounded-lg px-(--card-spacing) py-1.5 hover:bg-muted/50"
           >
             <Checkbox
               checked={todo.done}
@@ -164,7 +164,7 @@ function MailInPanel() {
           {mailIns.map((item) => (
             <li
               key={item.subject}
-              className="flex items-center gap-2 border-t border-border px-(--card-spacing) py-1.5 first:border-t-0"
+              className="flex items-center gap-1 border-t border-border px-(--card-spacing) py-1.5 first:border-t-0"
             >
               {item.channel === "Form" ? (
                 <InboxIcon className="size-4 shrink-0 text-muted-foreground" />

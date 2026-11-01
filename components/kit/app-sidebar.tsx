@@ -17,6 +17,7 @@ import {
 } from "lucide-react"
 
 import { cn } from "@/lib/utils"
+import { Spotlight } from "@/components/kit/spotlight"
 import { Button } from "@/components/ui/button"
 
 const nav = [
@@ -43,24 +44,24 @@ export function AppSidebar({
   return (
     <aside
       className={cn(
-        "flex h-dvh shrink-0 flex-col border-r border-border bg-sidebar text-sidebar-foreground motion-safe:transition-[width] motion-safe:duration-150 motion-safe:ease-out",
+        "flex h-dvh shrink-0 flex-col bg-sidebar text-sidebar-foreground motion-safe:transition-[width] motion-safe:duration-150 motion-safe:ease-out",
         collapsed ? "w-14" : "w-56"
       )}
     >
-      <div className={cn("flex h-12 items-center gap-2 px-2.5", collapsed && "justify-center")}>
+      <div className={cn("flex h-10 items-center gap-1 px-1.5", collapsed && "justify-center")}>
         {collapsed ? (
           <button
             type="button"
             aria-label="Expand sidebar"
             title="Expand sidebar"
             onClick={() => onCollapsedChange(false)}
-            className="flex size-7 items-center justify-center rounded-lg bg-brand-gradient text-[11px] font-semibold text-brand-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            className="flex size-7 items-center justify-center rounded-lg bg-card text-[11px] font-semibold text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             C
           </button>
         ) : (
           <>
-            <span className="flex size-7 items-center justify-center rounded-lg bg-brand-gradient text-[11px] font-semibold text-brand-foreground">
+            <span className="flex size-7 items-center justify-center rounded-lg bg-card text-[11px] font-semibold text-foreground">
               C
             </span>
             <div className="min-w-0">
@@ -84,20 +85,24 @@ export function AppSidebar({
                   ? false
                   : pathname === item.href
           return (
-            <Link
+            <Spotlight
               key={item.label}
+              className={cn(collapsed && "flex justify-center")}
+            >
+            <Link
               href={item.href}
               title={collapsed ? item.label : undefined}
               aria-current={active ? "page" : undefined}
               className={cn(
-                "flex h-8 items-center gap-2 rounded-lg px-2 text-sm font-medium text-muted-foreground hover:bg-muted hover:text-foreground",
+                "flex h-7 items-center gap-1 rounded-lg px-2 text-sm font-medium text-muted-foreground hover:bg-accent hover:text-foreground",
                 collapsed && "justify-center px-0",
-                active && "bg-brand-soft text-foreground ring-1 ring-brand/40"
+                active && "bg-accent text-white"
               )}
             >
-              <Icon className={cn("size-4 shrink-0", active && "text-brand")} />
+              <Icon className={cn("size-4 shrink-0", active && "text-white")} />
               {!collapsed ? <span className="truncate">{item.label}</span> : null}
             </Link>
+            </Spotlight>
           )
         })}
       </nav>
@@ -130,7 +135,7 @@ export function AppHeader({
   trailing?: React.ReactNode
 }) {
   return (
-    <header className="flex h-12 shrink-0 items-center gap-2 border-b border-border px-2">
+    <header className="flex h-10 shrink-0 items-center gap-1 bg-sidebar px-1">
       <Button
         variant="ghost"
         size="icon-sm"
