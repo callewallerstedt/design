@@ -3,6 +3,6 @@ description: Calle design-system rules for UI work in this repo
 alwaysApply: true
 ---
 
-Read TUTORIAL.md then DESIGN.md before writing or changing UI.
+Read DESIGN.md. Search the catalog (`catalog/components.json`, or `node scripts/find.mjs <query>`). Open `local_path` under `components/external` and import that file. Apply the tokens in `app/globals.css`.
 
-Hard rules: Inter (medium body, semibold headings), 8px rounding (`rounded-lg`), tight card padding, greyscale surfaces, one accent (`ember` | `sun` | `ice`) via CSS variables. Minimal copy — no emojis, no eyebrows, no helper badges. Icons are Lucide, `size-4`, muted unless active. Wrap product pages in AppShell. Reuse components/ui and components/kit.
+Then read TUTORIAL.md. Prefer `components/ui` and `components/kit` before an external import. Hard rules: Inter (medium body, semibold headings), 6px radius (`rounded-lg`, never above 8px), tight padding, dark greyscale surfaces, white accent, no colored brand hues. Minimal copy — no emojis, no eyebrows, no helper badges. Icons are Lucide, `size-4`, muted unless active. Wrap product pages in AppShell. BoardUI Pro is paid and has no source in this repo.

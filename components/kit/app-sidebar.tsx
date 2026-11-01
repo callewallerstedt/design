@@ -7,6 +7,7 @@ import {
   BarChart3Icon,
   BellIcon,
   BookOpenIcon,
+  FolderOpenIcon,
   LayoutDashboardIcon,
   PanelLeftCloseIcon,
   PanelLeftOpenIcon,
@@ -16,10 +17,7 @@ import {
 } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { accentMeta, accents, type Accent } from "@/lib/accent"
-import { useAccent } from "@/components/accent-provider"
 import { Button } from "@/components/ui/button"
-import { Separator } from "@/components/ui/separator"
 
 const nav = [
   { href: "/", label: "Overview", icon: LayoutDashboardIcon },
@@ -28,6 +26,7 @@ const nav = [
   { href: "/#analytics", label: "Analytics", icon: BarChart3Icon },
   { href: "/", label: "Churn", icon: ActivityIcon, match: "churn" },
   { href: "/kit", label: "Kit", icon: PanelsTopLeftIcon },
+  { href: "/catalog", label: "Catalog", icon: FolderOpenIcon },
   { href: "/kit#rules", label: "Rules", icon: BookOpenIcon },
 ]
 
@@ -39,7 +38,6 @@ export function AppSidebar({
   onCollapsedChange: (collapsed: boolean) => void
 }) {
   const pathname = usePathname()
-  const { accent, setAccent } = useAccent()
   const churnActive = pathname === "/"
 
   return (
@@ -78,6 +76,8 @@ export function AppSidebar({
           const active =
             item.href === "/kit"
               ? pathname.startsWith("/kit")
+              : item.href === "/catalog"
+                ? pathname.startsWith("/catalog")
               : item.match === "churn"
                 ? churnActive
                 : item.href === "/"
@@ -103,18 +103,6 @@ export function AppSidebar({
       </nav>
 
       <div className={cn("flex flex-col gap-1 px-1.5 pb-2", collapsed && "items-center")}>
-        <div className={cn("flex gap-1", collapsed ? "flex-col" : "px-1")}>
-          {accents.map((id) => (
-            <AccentSwatch
-              key={id}
-              id={id}
-              selected={accent === id}
-              collapsed={collapsed}
-              onSelect={setAccent}
-            />
-          ))}
-        </div>
-        <Separator className="my-1" />
         <Button
           variant={collapsed ? "outline" : "ghost"}
           size={collapsed ? "icon-sm" : "sm"}
@@ -130,45 +118,6 @@ export function AppSidebar({
       </div>
     </aside>
   )
-}
-
-function AccentSwatch({
-  id,
-  selected,
-  collapsed,
-  onSelect,
-}: {
-  id: Accent
-  selected: boolean
-  collapsed: boolean
-  onSelect: (accent: Accent) => void
-}) {
-  const meta = accentMeta[id]
-  return (
-    <button
-      type="button"
-      aria-label={`${meta.label} accent`}
-      aria-pressed={selected}
-      title={meta.hint}
-      onClick={() => onSelect(id)}
-      className={cn(
-        "size-5 rounded-lg bg-brand-gradient ring-offset-2 ring-offset-background focus-visible:ring-2 focus-visible:ring-ring",
-        selected && "ring-2 ring-foreground",
-        collapsed && "size-4"
-      )}
-      style={swatchStyle(id)}
-    />
-  )
-}
-
-function swatchStyle(id: Accent): React.CSSProperties {
-  const map: Record<Accent, [string, string]> = {
-    ember: ["oklch(0.74 0.18 52)", "oklch(0.58 0.22 32)"],
-    sun: ["oklch(0.86 0.16 92)", "oklch(0.7 0.18 58)"],
-    ice: ["oklch(0.82 0.1 220)", "oklch(0.58 0.16 250)"],
-  }
-  const [from, to] = map[id]
-  return { backgroundImage: `linear-gradient(135deg, ${from}, ${to})` }
 }
 
 export function AppHeader({

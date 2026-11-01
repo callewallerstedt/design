@@ -26,7 +26,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       className={`${inter.variable} ${geistMono.variable} h-full antialiased dark`}
-      data-accent="ember"
       suppressHydrationWarning
     >
       <body className="min-h-full font-sans">

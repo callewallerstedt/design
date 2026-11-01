@@ -1,0 +1,761 @@
+{
+  "easyui": {
+    "activity-feed": [
+      "components/external/easyui/ui/ActivityFeed.tsx"
+    ],
+    "activity-heatmap": [
+      "components/external/easyui/ui/ActivityHeatmap.tsx"
+    ],
+    "advanced-data-table": [
+      "components/external/easyui/ui/AdvancedDataTable.tsx"
+    ],
+    "ai-agent-activity": [
+      "components/external/easyui/ui/AIAgentActivity.tsx"
+    ],
+    "ai-response": [
+      "components/external/easyui/ui/AIResponse.tsx"
+    ],
+    "airport-matrix-clock": [
+      "components/external/easyui/ui/AirportMatrixClock.tsx"
+    ],
+    "alert": [
+      "components/external/easyui/ui/alert.tsx"
+    ],
+    "animated-file-upload": [
+      "components/external/easyui/ui/AnimatedFileUpload.tsx"
+    ],
+    "animated-number": [
+      "components/external/easyui/ui/AnimatedNumber.tsx"
+    ],
+    "animated-tabs": [
+      "components/external/easyui/ui/AnimatedTabs.tsx"
+    ],
+    "avatar-stack": [
+      "components/external/easyui/ui/AvatarStack.tsx"
+    ],
+    "badge": [
+      "components/external/easyui/ui/badge.tsx"
+    ],
+    "bar-chart": [
+      "components/external/easyui/ui/BarChart.tsx"
+    ],
+    "batch-gesture-tray": [
+      "components/external/easyui/ui/BatchGestureTray.tsx"
+    ],
+    "book-call-button": [
+      "components/external/easyui/ui/BookCallButton.tsx"
+    ],
+    "branching-submenu": [
+      "components/external/easyui/ui/BranchingSubmenu.tsx"
+    ],
+    "breadcrumb": [
+      "components/external/easyui/ui/breadcrumb.tsx"
+    ],
+    "button": [
+      "components/external/easyui/ui/Button.tsx"
+    ],
+    "calendar": [
+      "components/external/easyui/ui/calendar.tsx"
+    ],
+    "car-smoke-page-transition": [
+      "components/external/easyui/ui/CarSmokePageTransition.tsx"
+    ],
+    "chat": [
+      "components/external/easyui/ui/Chat.tsx"
+    ],
+    "circular-orbit": [
+      "components/external/easyui/ui/CircularOrbit.tsx"
+    ],
+    "code-snippet-deck": [
+      "components/external/easyui/ui/CodeSnippetDeck.tsx"
+    ],
+    "combobox": [
+      "components/external/easyui/ui/combobox.tsx"
+    ],
+    "command-menu": [
+      "components/external/easyui/ui/CommandMenu.tsx"
+    ],
+    "cursor-follower": [
+      "components/external/easyui/ui/CursorFollower.tsx"
+    ],
+    "date-picker": [
+      "components/external/easyui/ui/date-picker.tsx",
+      "components/external/easyui/ui/calendar.tsx"
+    ],
+    "density-lens": [
+      "components/external/easyui/ui/DensityLens.tsx"
+    ],
+    "dependency-trace": [
+      "components/external/easyui/ui/DependencyTrace.tsx"
+    ],
+    "depth-corridor": [
+      "components/external/easyui/ui/DepthCorridor.tsx"
+    ],
+    "directional-tooltip": [
+      "components/external/easyui/ui/DirectionalTooltip.tsx"
+    ],
+    "donut-chart": [
+      "components/external/easyui/ui/DonutChart.tsx"
+    ],
+    "dot-field": [
+      "components/external/easyui/ui/DotField.tsx",
+      "components/external/easyui/ui/DotField.css"
+    ],
+    "dot-shader": [
+      "components/external/easyui/ui/DotShader.tsx"
+    ],
+    "drag-to-confirm": [
+      "components/external/easyui/ui/DragToConfirm.tsx"
+    ],
+    "draw-checkbox": [
+      "components/external/easyui/ui/DrawCheckbox.tsx"
+    ],
+    "dynamic-island": [
+      "components/external/easyui/ui/DynamicIsland.tsx"
+    ],
+    "evil-eye": [
+      "components/external/easyui/ui/EvilEye.tsx"
+    ],
+    "expandable-data-row": [
+      "components/external/easyui/ui/ExpandableDataRow.tsx"
+    ],
+    "expandable-search": [
+      "components/external/easyui/ui/ExpandableSearch.tsx"
+    ],
+    "faq": [
+      "components/external/easyui/ui/FAQ.tsx"
+    ],
+    "floating-action-dock": [
+      "components/external/easyui/ui/FloatingActionDock.tsx"
+    ],
+    "focus-mode": [
+      "components/external/easyui/ui/FocusMode.tsx"
+    ],
+    "form": [
+      "components/external/easyui/ui/Form.tsx"
+    ],
+    "funnel-chart": [
+      "components/external/easyui/ui/FunnelChart.tsx"
+    ],
+    "glass-navbar": [
+      "components/external/easyui/ui/GlassNavbar.tsx"
+    ],
+    "glitch-text": [
+      "components/external/easyui/ui/GlitchText.tsx"
+    ],
+    "glyph-matrix": [
+      "components/external/easyui/ui/GlyphMatrix.tsx"
+    ],
+    "gooey-menu": [
+      "components/external/easyui/ui/GooeyMenu.tsx"
+    ],
+    "gravity-particle-burst": [
+      "components/external/easyui/ui/GravityParticleBurst.tsx"
+    ],
+    "hamburger-menu": [
+      "components/external/easyui/ui/HamburgerMenu.tsx"
+    ],
+    "interactive-area-chart": [
+      "components/external/easyui/ui/InteractiveAreaChart.tsx"
+    ],
+    "interactive-timeline": [
+      "components/external/easyui/ui/InteractiveTimeline.tsx"
+    ],
+    "intro-loader": [
+      "components/external/easyui/ui/IntroLoader.tsx"
+    ],
+    "ios-search-bar": [
+      "components/external/easyui/ui/IOSSearchBar.tsx"
+    ],
+    "liquid-ripple-button": [
+      "components/external/easyui/ui/LiquidRippleButton.tsx"
+    ],
+    "liquid-toggle": [
+      "components/external/easyui/ui/LiquidToggle.tsx"
+    ],
+    "live-line-chart": [
+      "components/external/easyui/ui/LiveLineChart.tsx"
+    ],
+    "loader": [
+      "components/external/easyui/ui/Loader.tsx"
+    ],
+    "lock-input": [
+      "components/external/easyui/ui/LockInput.tsx"
+    ],
+    "login": [
+      "components/external/easyui/ui/Login.tsx",
+      "components/external/easyui/ui/Button.tsx",
+      "components/external/easyui/ui/Form.tsx"
+    ],
+    "mac-os-folder-cards": [
+      "components/external/easyui/ui/MacOSFolderCards.tsx"
+    ],
+    "magnetic-button": [
+      "components/external/easyui/ui/MagneticButton.tsx"
+    ],
+    "meteors": [
+      "components/external/easyui/ui/Meteors.tsx"
+    ],
+    "metric-hud": [
+      "components/external/easyui/ui/MetricHUD.tsx"
+    ],
+    "money-card": [
+      "components/external/easyui/ui/MoneyCard.tsx"
+    ],
+    "morphing-blob": [
+      "components/external/easyui/ui/MorphingBlob.tsx"
+    ],
+    "morphing-button": [
+      "components/external/easyui/ui/MorphingButton.tsx"
+    ],
+    "morphing-dialog": [
+      "components/external/easyui/ui/MorphingDialog.tsx"
+    ],
+    "morphing-icon": [
+      "components/external/easyui/ui/MorphingIcon.tsx"
+    ],
+    "morphing-mega-menu": [
+      "components/external/easyui/ui/MorphingMegaMenu.tsx"
+    ],
+    "morphing-shape-loader": [
+      "components/external/easyui/ui/MorphingShapeLoader.tsx"
+    ],
+    "neon-edge-button": [
+      "components/external/easyui/ui/NeonEdgeButton.tsx"
+    ],
+    "nimbu-mirchi": [
+      "components/external/easyui/ui/NimbuMirchi.tsx"
+    ],
+    "not-found": [
+      "components/external/easyui/ui/NotFound.tsx"
+    ],
+    "notification-bell": [
+      "components/external/easyui/ui/NotificationBell.tsx"
+    ],
+    "notification-stack": [
+      "components/external/easyui/ui/NotificationStack.tsx"
+    ],
+    "orbital-loading-ring": [
+      "components/external/easyui/ui/OrbitalLoadingRing.tsx"
+    ],
+    "origin-dropdown": [
+      "components/external/easyui/ui/OriginDropdown.tsx"
+    ],
+    "otp-input": [
+      "components/external/easyui/ui/OtpInput.tsx"
+    ],
+    "package-box": [
+      "components/external/easyui/ui/PackageBox.tsx"
+    ],
+    "particle-delete": [
+      "components/external/easyui/ui/ParticleDelete.tsx"
+    ],
+    "payment-receipt-printer": [
+      "components/external/easyui/ui/PaymentReceiptPrinter.tsx"
+    ],
+    "payment-status": [
+      "components/external/easyui/ui/PaymentStatus.tsx"
+    ],
+    "peek-card": [
+      "components/external/easyui/ui/PeekCard.tsx"
+    ],
+    "photo-box": [
+      "components/external/easyui/ui/PhotoBox.tsx"
+    ],
+    "pill-navigation": [
+      "components/external/easyui/ui/PillNavigation.tsx"
+    ],
+    "press-button": [
+      "components/external/easyui/ui/PressButton.tsx"
+    ],
+    "pricing": [
+      "components/external/easyui/ui/Pricing.tsx"
+    ],
+    "product-tour": [
+      "components/external/easyui/ui/ProductTour.tsx"
+    ],
+    "profile-card": [
+      "components/external/easyui/ui/ProfileCard.tsx"
+    ],
+    "pull-to-refresh": [
+      "components/external/easyui/ui/PullToRefresh.tsx"
+    ],
+    "rainbow-button": [
+      "components/external/easyui/ui/RainbowButton.tsx"
+    ],
+    "recovery-ledger": [
+      "components/external/easyui/ui/RecoveryLedger.tsx"
+    ],
+    "reveal-card": [
+      "components/external/easyui/ui/RevealCard.tsx"
+    ],
+    "rocket-party-popper": [
+      "components/external/easyui/ui/RocketPartyPopper.tsx"
+    ],
+    "scroll-progress-nav": [
+      "components/external/easyui/ui/ScrollProgressNav.tsx"
+    ],
+    "scrollvelocitytext": [
+      "components/external/easyui/ui/Scrollvelocitytext.tsx"
+    ],
+    "selection-basket": [
+      "components/external/easyui/ui/SelectionBasket.tsx"
+    ],
+    "settle-modal": [
+      "components/external/easyui/ui/SettleModal.tsx"
+    ],
+    "sheet": [
+      "components/external/easyui/ui/sheet.tsx"
+    ],
+    "shooting-stars": [
+      "components/external/easyui/ui/ShootingStars.tsx"
+    ],
+    "sidebar": [
+      "components/external/easyui/ui/sidebar.tsx"
+    ],
+    "sign-up": [
+      "components/external/easyui/ui/SignUp.tsx",
+      "components/external/easyui/ui/Button.tsx",
+      "components/external/easyui/ui/Form.tsx"
+    ],
+    "skeleton": [
+      "components/external/easyui/ui/skeleton.tsx"
+    ],
+    "slide-pagination": [
+      "components/external/easyui/ui/SlidePagination.tsx"
+    ],
+    "small-floating-dock": [
+      "components/external/easyui/ui/SmallFloatingDock.tsx"
+    ],
+    "smart-comparison": [
+      "components/external/easyui/ui/SmartComparison.tsx"
+    ],
+    "smooth-accordion": [
+      "components/external/easyui/ui/SmoothAccordion.tsx"
+    ],
+    "sparkles-core": [
+      "components/external/easyui/ui/SparklesCore.tsx"
+    ],
+    "speed-warp": [
+      "components/external/easyui/ui/SpeedWarp.tsx"
+    ],
+    "split-button": [
+      "components/external/easyui/ui/SplitButton.tsx"
+    ],
+    "spotlight-card": [
+      "components/external/easyui/ui/SpotlightCard.tsx"
+    ],
+    "spotlight-search": [
+      "components/external/easyui/ui/SpotlightSearch.tsx"
+    ],
+    "spring-select": [
+      "components/external/easyui/ui/SpringSelect.tsx"
+    ],
+    "stack-unfold-panel": [
+      "components/external/easyui/ui/StackUnfoldPanel.tsx"
+    ],
+    "stacked-cards": [
+      "components/external/easyui/ui/StackedCards.tsx"
+    ],
+    "stat-card": [
+      "components/external/easyui/ui/StatCard.tsx"
+    ],
+    "stepper": [
+      "components/external/easyui/ui/stepper.tsx"
+    ],
+    "sticky-pages": [
+      "components/external/easyui/ui/StickyPages.tsx"
+    ],
+    "story-card": [
+      "components/external/easyui/ui/StoryCard.tsx"
+    ],
+    "stretch-switch": [
+      "components/external/easyui/ui/StretchSwitch.tsx"
+    ],
+    "text-scramble-decoder": [
+      "components/external/easyui/ui/TextScrambleDecoder.tsx"
+    ],
+    "thinking-orb": [
+      "components/external/easyui/ui/ThinkingOrb.tsx"
+    ],
+    "torque-dial": [
+      "components/external/easyui/ui/TorqueDial.tsx"
+    ],
+    "typewriter-button": [
+      "components/external/easyui/ui/TypewriterButton.tsx"
+    ],
+    "undo-toast": [
+      "components/external/easyui/ui/UndoToast.tsx"
+    ],
+    "unfold-accordion": [
+      "components/external/easyui/ui/UnfoldAccordion.tsx"
+    ],
+    "velocity-toast": [
+      "components/external/easyui/ui/VelocityToast.tsx"
+    ],
+    "wallet-balance": [
+      "components/external/easyui/ui/WalletBalance.tsx"
+    ],
+    "wallet-card": [
+      "components/external/easyui/ui/WalletCard.tsx"
+    ]
+  },
+  "boardui": {
+    "template-copy": [
+      "components/external/boardui/foundations/template-copy/template-copy.tsx"
+    ],
+    "direction": [
+      "components/external/boardui/foundations/direction/direction.tsx"
+    ],
+    "scroll-direction": [
+      "components/external/boardui/utils/scroll-direction.ts"
+    ],
+    "directional-icon": [
+      "components/external/boardui/utils/directional-icon.ts"
+    ],
+    "theme": [
+      "components/external/boardui/styles/theme.css"
+    ],
+    "typography": [
+      "components/external/boardui/styles/typography.css"
+    ],
+    "globals": [
+      "components/external/boardui/styles/globals.css"
+    ],
+    "cx": [
+      "components/external/boardui/utils/cx.ts"
+    ],
+    "rules": [
+      "components/external/boardui/docs/agent-rules.md"
+    ],
+    "use-dismiss-on-outside-press": [
+      "components/external/boardui/utils/use-dismiss-on-outside-press.ts"
+    ],
+    "scroll-fade": [
+      "components/external/boardui/foundations/scroll-fade/scroll-fade.tsx"
+    ],
+    "use-count-up": [
+      "components/external/boardui/hooks/use-count-up.ts"
+    ],
+    "chevrons": [
+      "components/external/boardui/foundations/icons/chevrons.tsx"
+    ],
+    "logo": [
+      "components/external/boardui/foundations/brand/logo.tsx"
+    ],
+    "modal": [
+      "components/external/boardui/base/modal/modal.tsx"
+    ],
+    "drawer": [
+      "components/external/boardui/base/drawer/drawer.tsx"
+    ],
+    "popover": [
+      "components/external/boardui/base/popover/popover.tsx"
+    ],
+    "combobox": [
+      "components/external/boardui/base/combobox/combobox.tsx",
+      "components/external/boardui/base/dropdown/menu-styles.ts"
+    ],
+    "toast": [
+      "components/external/boardui/base/toast/toast.tsx"
+    ],
+    "accordion": [
+      "components/external/boardui/base/accordion/accordion.tsx"
+    ],
+    "spinner": [
+      "components/external/boardui/base/spinner/spinner.tsx"
+    ],
+    "progress": [
+      "components/external/boardui/base/progress/progress.tsx"
+    ],
+    "meter": [
+      "components/external/boardui/base/meter/meter.tsx"
+    ],
+    "skeleton": [
+      "components/external/boardui/base/skeleton/skeleton.tsx"
+    ],
+    "command-palette": [
+      "components/external/boardui/base/command-palette/command-palette.tsx"
+    ],
+    "context-menu": [
+      "components/external/boardui/base/context-menu/context-menu.tsx",
+      "components/external/boardui/base/dropdown/menu-styles.ts"
+    ],
+    "search-field": [
+      "components/external/boardui/base/search-field/search-field.tsx"
+    ],
+    "number-field": [
+      "components/external/boardui/base/number-field/number-field.tsx"
+    ],
+    "time-field": [
+      "components/external/boardui/base/time-field/time-field.tsx"
+    ],
+    "tag-group": [
+      "components/external/boardui/base/tag-group/tag-group.tsx"
+    ],
+    "date-calendar": [
+      "components/external/boardui/base/date-picker/date-calendar.tsx",
+      "components/external/boardui/base/date-picker/shared.tsx"
+    ],
+    "color-picker": [
+      "components/external/boardui/base/color-picker/color-picker.tsx"
+    ],
+    "tree-view": [
+      "components/external/boardui/base/dropdown/menu-styles.ts",
+      "components/external/boardui/base/tree-view/tree-view.tsx"
+    ],
+    "button": [
+      "components/external/boardui/base/buttons/button.tsx"
+    ],
+    "icon-button": [
+      "components/external/boardui/base/buttons/icon-button.tsx"
+    ],
+    "link-button": [
+      "components/external/boardui/base/buttons/link-button.tsx"
+    ],
+    "button-group": [
+      "components/external/boardui/base/buttons/button-group.tsx"
+    ],
+    "close-button": [
+      "components/external/boardui/base/buttons/close-button.tsx"
+    ],
+    "input": [
+      "components/external/boardui/base/input/hint-text.tsx",
+      "components/external/boardui/base/input/input.tsx",
+      "components/external/boardui/base/input/label.tsx"
+    ],
+    "textarea": [
+      "components/external/boardui/base/textarea/textarea.tsx"
+    ],
+    "checkbox": [
+      "components/external/boardui/base/checkbox/checkbox-glyph.tsx",
+      "components/external/boardui/base/checkbox/checkbox.tsx"
+    ],
+    "checkbox-card": [
+      "components/external/boardui/base/checkbox/checkbox-card.tsx",
+      "components/external/boardui/base/checkbox/checkbox-glyph.tsx"
+    ],
+    "radio": [
+      "components/external/boardui/base/radio/radio.tsx"
+    ],
+    "radio-card": [
+      "components/external/boardui/base/radio/radio-card.tsx"
+    ],
+    "switch": [
+      "components/external/boardui/base/switch/switch.tsx"
+    ],
+    "switch-card": [
+      "components/external/boardui/base/switch/switch-card.tsx"
+    ],
+    "theme-toggle": [
+      "components/external/boardui/application/theme/theme-toggle.tsx"
+    ],
+    "select": [
+      "components/external/boardui/base/dropdown/menu-styles.ts",
+      "components/external/boardui/base/select/select.tsx"
+    ],
+    "slider": [
+      "components/external/boardui/base/slider/slider.tsx"
+    ],
+    "social-button": [
+      "components/external/boardui/base/social-button/social-button.tsx",
+      "components/external/boardui/base/social-button/social-color-logos.ts",
+      "components/external/boardui/base/social-button/social-providers.ts"
+    ],
+    "dropdown": [
+      "components/external/boardui/base/dropdown/dropdown.tsx",
+      "components/external/boardui/base/dropdown/menu-styles.ts"
+    ],
+    "divider": [
+      "components/external/boardui/base/divider/divider.tsx"
+    ],
+    "file-upload": [
+      "components/external/boardui/base/file-upload/file-upload.tsx"
+    ],
+    "tabs": [
+      "components/external/boardui/base/tabs/pill-tab.tsx",
+      "components/external/boardui/base/tabs/tabs.tsx"
+    ],
+    "table": [
+      "components/external/boardui/base/table/table.tsx"
+    ],
+    "tooltip": [
+      "components/external/boardui/base/tooltip/tooltip.tsx"
+    ],
+    "badge": [
+      "components/external/boardui/base/badges/badge.tsx"
+    ],
+    "chip": [
+      "components/external/boardui/base/badges/chip.tsx"
+    ],
+    "status-dot": [
+      "components/external/boardui/base/badges/status-dot.tsx"
+    ],
+    "avatar": [
+      "components/external/boardui/base/avatar/avatar.tsx"
+    ],
+    "breadcrumb": [
+      "components/external/boardui/base/breadcrumb/breadcrumb.tsx"
+    ],
+    "pagination": [
+      "components/external/boardui/base/pagination/pagination.tsx"
+    ],
+    "carousel": [
+      "components/external/boardui/base/carousel/carousel.tsx"
+    ],
+    "input-otp": [
+      "components/external/boardui/base/input-otp/input-otp.tsx"
+    ],
+    "segmented-control": [
+      "components/external/boardui/base/segmented-control/segmented-control.tsx"
+    ],
+    "announcement": [
+      "components/external/boardui/base/announcement/announcement.tsx"
+    ],
+    "notification": [
+      "components/external/boardui/base/notification/notification.tsx"
+    ],
+    "kbd": [
+      "components/external/boardui/base/kbd/kbd.tsx"
+    ],
+    "date-picker": [
+      "components/external/boardui/base/date-picker/date-picker.tsx",
+      "components/external/boardui/base/date-picker/shared.tsx"
+    ],
+    "date-range-picker": [
+      "components/external/boardui/base/date-picker/date-range-picker.tsx",
+      "components/external/boardui/base/date-picker/shared.tsx"
+    ],
+    "meeting-scheduler": [
+      "components/external/boardui/base/date-picker/meeting-scheduler.tsx",
+      "components/external/boardui/base/date-picker/shared.tsx"
+    ],
+    "agent-runtime": [
+      "components/external/boardui/server/chat-route.ts"
+    ],
+    "agent-chat": [
+      "components/external/boardui/application/agent-chat/agent-chat-actions.tsx",
+      "components/external/boardui/application/agent-chat/agent-chat-history.tsx",
+      "components/external/boardui/application/agent-chat/agent-chat-message.tsx",
+      "components/external/boardui/application/agent-chat/agent-chat.tsx",
+      "components/external/boardui/application/agent-chat/agent-composer.tsx",
+      "components/external/boardui/application/agent-chat/demo-answers.ts",
+      "components/external/boardui/application/agent-chat/demo-transport.ts",
+      "components/external/boardui/application/app-shell/pro-offer-card.tsx",
+      "components/external/boardui/application/landing/hero-rays/hero-rays-config.ts",
+      "components/external/boardui/application/landing/hero-rays/hero-rays-shader.ts",
+      "components/external/boardui/application/landing/hero-rays/hero-rays.tsx",
+      "components/external/boardui/application/landing/pro-logo-mark.tsx",
+      "components/external/boardui/application/landing/tuning/tuning-types.ts",
+      "components/external/boardui/application/templates/pro-prompt-card.tsx",
+      "components/external/boardui/application/templates/pro-prompt-rays.ts"
+    ],
+    "app-shell": [
+      "components/external/boardui/application/app-shell/app-shell.tsx",
+      "components/external/boardui/application/app-shell/components-catalog.tsx",
+      "components/external/boardui/application/app-shell/notification-bell.tsx",
+      "components/external/boardui/application/app-shell/pro-offer-card.tsx",
+      "components/external/boardui/application/app-shell/starter-notifications.ts",
+      "components/external/boardui/application/dashboard/dashboard-user-menu.tsx",
+      "components/external/boardui/application/docs/accordion-preview.tsx",
+      "components/external/boardui/application/docs/color-picker-preview.tsx",
+      "components/external/boardui/application/docs/combobox-preview.tsx",
+      "components/external/boardui/application/docs/command-palette-preview.tsx",
+      "components/external/boardui/application/docs/component-preview-hrefs.ts",
+      "components/external/boardui/application/docs/component-previews-free.tsx",
+      "components/external/boardui/application/docs/components-index.ts",
+      "components/external/boardui/application/docs/context-menu-preview.tsx",
+      "components/external/boardui/application/docs/date-calendar-preview.tsx",
+      "components/external/boardui/application/docs/drawer-preview.tsx",
+      "components/external/boardui/application/docs/examples/data-grid-example.tsx",
+      "components/external/boardui/application/docs/free-landing-previews.tsx",
+      "components/external/boardui/application/docs/meter-preview.tsx",
+      "components/external/boardui/application/docs/modal-preview.tsx",
+      "components/external/boardui/application/docs/number-field-preview.tsx",
+      "components/external/boardui/application/docs/popover-preview.tsx",
+      "components/external/boardui/application/docs/preview-images.ts",
+      "components/external/boardui/application/docs/progress-preview.tsx",
+      "components/external/boardui/application/docs/search-field-preview.tsx",
+      "components/external/boardui/application/docs/showcase-card.tsx",
+      "components/external/boardui/application/docs/skeleton-preview.tsx",
+      "components/external/boardui/application/docs/spinner-preview.tsx",
+      "components/external/boardui/application/docs/tag-group-preview.tsx",
+      "components/external/boardui/application/docs/time-field-preview.tsx",
+      "components/external/boardui/application/docs/toast-preview.tsx",
+      "components/external/boardui/application/docs/tree-view-preview.tsx",
+      "components/external/boardui/application/landing/hero-rays/hero-rays-config.ts",
+      "components/external/boardui/application/landing/hero-rays/hero-rays-shader.ts",
+      "components/external/boardui/application/landing/hero-rays/hero-rays.tsx",
+      "components/external/boardui/application/landing/pro-logo-mark.tsx",
+      "components/external/boardui/application/landing/tuning/tuning-types.ts",
+      "components/external/boardui/application/notification-center/notification-center-demo.tsx",
+      "components/external/boardui/application/settings/plan-art-flame.tsx",
+      "components/external/boardui/application/settings/settings-general.tsx",
+      "components/external/boardui/application/settings/settings-rows.tsx",
+      "components/external/boardui/application/templates/pro-prompt-card.tsx",
+      "components/external/boardui/application/templates/pro-prompt-rays.ts",
+      "components/external/boardui/base/date-picker/shared.tsx",
+      "components/external/boardui/base/dropdown/menu-styles.ts"
+    ],
+    "agent-thinking": [
+      "components/external/boardui/application/agent-thinking/agent-thinking.tsx"
+    ],
+    "agent-log": [
+      "components/external/boardui/application/agent-log/agent-log.tsx"
+    ],
+    "composer-loader": [
+      "components/external/boardui/application/composer-loader/composer-loader.tsx"
+    ],
+    "sidebar": [
+      "components/external/boardui/application/dashboard/dashboard-sidebar.tsx",
+      "components/external/boardui/application/dashboard/dashboard-team-menu.tsx",
+      "components/external/boardui/application/dashboard/dashboard-user-menu.tsx"
+    ],
+    "settings-modal": [
+      "components/external/boardui/application/settings/plan-art-flame.tsx",
+      "components/external/boardui/application/settings/settings-general.tsx",
+      "components/external/boardui/application/settings/settings-modal.tsx",
+      "components/external/boardui/application/settings/settings-profile.tsx",
+      "components/external/boardui/application/settings/settings-rows.tsx",
+      "components/external/boardui/application/settings/settings-storage.tsx",
+      "components/external/boardui/application/settings/settings-tools.tsx",
+      "components/external/boardui/registry-files/public/ai-chat/plugin-documents-dark.svg",
+      "components/external/boardui/registry-files/public/ai-chat/plugin-documents.svg",
+      "components/external/boardui/registry-files/public/ai-chat/plugin-spreadsheets.svg",
+      "components/external/boardui/registry-files/public/ai-chat/plugin-videos.svg"
+    ],
+    "auth-card": [
+      "components/external/boardui/application/auth/auth-card.tsx",
+      "components/external/boardui/application/auth/auth-media-carousel.tsx",
+      "components/external/boardui/base/social-button/social-providers.ts"
+    ],
+    "notification-center": [
+      "components/external/boardui/application/notification-center/notification-center.tsx"
+    ],
+    "data-grid": [
+      "components/external/boardui/application/data-grid/data-grid-utils.ts",
+      "components/external/boardui/application/data-grid/data-grid.tsx"
+    ],
+    "data-table": [
+      "components/external/boardui/application/data-table/data-table.tsx",
+      "components/external/boardui/application/docs/examples/data-table-example.tsx"
+    ],
+    "stat-cards": [
+      "components/external/boardui/application/dashboard/stat-cards.tsx"
+    ],
+    "revenue-chart-card": [
+      "components/external/boardui/application/dashboard/revenue-chart-card.tsx"
+    ],
+    "orders-chart-card": [
+      "components/external/boardui/application/dashboard/orders-chart-card.tsx"
+    ],
+    "important-alerts-card": [
+      "components/external/boardui/application/medical/important-alerts-card.tsx",
+      "components/external/boardui/application/medical/week-range-pill.tsx",
+      "components/external/boardui/base/date-picker/shared.tsx"
+    ],
+    "patient-info-card": [
+      "components/external/boardui/application/medical/patient-info-card.tsx"
+    ]
+  }
+}

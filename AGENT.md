@@ -1,3 +1,3 @@
-@AGENTS.md
+Read DESIGN.md. Search the catalog (`node scripts/find.mjs <query>` or `catalog/components.json`). Open `local_path` under `components/external` and import that file. Apply the tokens in `app/globals.css`.
 
-Read TUTORIAL.md then DESIGN.md before writing UI. Inter, 8px radius, tight padding, greyscale + one accent. Minimal copy, no emojis. Use AppShell, components/ui, and components/kit.
+@AGENTS.md

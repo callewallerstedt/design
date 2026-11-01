@@ -21,6 +21,16 @@ This kit is original work unless noted. Closed-source galleries were used as **p
 ### Geist
 - Vercel Geist fonts via `next/font/google`.
 
+### EasyUI
+- Site: https://easyui.site · https://github.com/Surajmaurya1/easyui
+- License: MIT (`components/external/easyui/LICENSE`)
+- What we shipped: component source in `components/external/easyui/ui`, plus the shared `lib` helpers those files import.
+
+### BoardUI (free)
+- Site: https://www.boardui.com · https://github.com/BoardUI/boardui
+- License: MIT (`components/external/boardui/LICENSE`)
+- What we shipped: the public free registry (primitives, blocks, foundations, utils, hooks, styles). Pro components and templates are not included.
+
 ## Inspired, not copied
 
 Original wrappers live in `components/kit/*` (MIT, this repo).

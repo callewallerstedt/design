@@ -1,8 +1,8 @@
 # DESIGN.md
 
-Calle’s design language for product UI. **Agents: read [`TUTORIAL.md`](./TUTORIAL.md) first**, then this file.
+Calle’s design language for product UI. **Agents: read this file, search [`catalog/components.json`](./catalog/components.json), open `local_path`, apply the tokens.**
 
-Greyscale SaaS. Inter. 8px corners. Tight padding. One settable accent gradient. Dark by default.
+Greyscale SaaS. Inter. 6px corners, 8px ceiling. Tight padding. White accent on near-black. Dark by default.
 
 The faux dashboard at `/` is the visual source of truth. `/kit` is the component gallery.
 
@@ -18,10 +18,10 @@ The faux dashboard at `/` is the visual source of truth. `/kit` is the component
 
 - **Inter** for all UI. `font-medium` on body, `font-semibold` on headings, buttons, and metrics.
 - Geist Mono for code, commands, identifiers.
-- Palette is **total greyscale** plus **one** accent (`ember` | `sun` | `ice`).
-- Accent is a short gradient (`--brand-from` → `--brand-to`) on CTAs, sparklines, and active nav. Not on backgrounds.
+- Palette is **total greyscale**. No colored brand hues.
+- Accent is **white** in dark mode and **near-black** in light mode (`--brand`). Not a second hue.
 - Elevation is a hairline ring (`ring-1 ring-foreground/10`). No card glow.
-- Radius is **8px** everywhere (`--radius: 8px`, use `rounded-lg`).
+- Radius is **6px** (`--radius: 6px`, `rounded-lg`). Nothing rounds past **8px**.
 - Empty states get **one** next action.
 - Copy is **minimal**. Icons are fine; keep them `size-4` and muted. No emojis, eyebrows, or helper badges.
 
@@ -69,11 +69,11 @@ See **TUTORIAL.md §3**. Short version:
 | --- | --- |
 | `--background` / `--card` | Greyscale surfaces |
 | `--foreground` / `--muted-foreground` | Text |
-| `--brand` / `--brand-from` / `--brand-to` | The one accent |
+| `--brand` / `--brand-from` / `--brand-to` | White on dark, near-black on light |
 | `--brand-foreground` | Text on brand fills |
-| `--destructive` | Irreversible / error |
+| `--destructive` | Irreversible / error. The only chroma. |
 
-Switch accent with `data-accent` (`ember`, `sun`, `ice`) via `useAccent()`. Light and dark are first-class.
+Dark is the default. Light stays greyscale so contrast holds. Do not add ember, sun, ice, purple, or a second accent.
 
 ## Motion
 
@@ -94,19 +94,32 @@ From Emil Kowalski, *You Don’t Need Animations*, plus UI Skills `baseline-ui`:
 
 ## Components — use the kit
 
-**Shell:** `AppShell`, `AppSidebar` — collapsible nav, accent picker.
+**Shell:** `AppShell`, `AppSidebar` — collapsible nav.
 
 **Primitives** (`components/ui`): Button (including `variant="brand"`), Input, Field, Card, Dialog, AlertDialog, Sheet, Tabs, Table, Badge, Avatar, …
 
 **Chat / agent** (`components/kit`): ChatThread, ChatMessage, MarkdownBubble, Composer, ToolChip, StatusChip, ThinkingTrace, ApprovalCard, TaskRow, CodeBlock.
 
+**External libraries** (`components/external`): free EasyUI and BoardUI source. Search with `node scripts/find.mjs <query>`. Import the `local_path`. BoardUI Pro is paid and is not in the repo.
+
+## Restyle EasyUI and BoardUI
+
+Their defaults are not Calle’s. After you import a file:
+
+- Point surfaces at `--background`, `--card`, `--muted`, `--foreground`, `--border`.
+- Accent is white (`bg-primary` / `text-primary`) in dark mode. Strip rainbow, neon, purple, and glow.
+- Radius stays `rounded-lg` (6px). Do not leave `rounded-2xl` or `rounded-3xl`. This repo caps `--radius-xl` and above at 8px.
+- Padding is `p-2` and `gap-2`. Controls stay `h-8`. Replace `p-6` / `p-8`.
+- EasyUI motion stays off unless the task asks for it.
+- Do not import `components/external/boardui/styles/globals.css` over `app/globals.css`.
+- Pro items stop at the catalog. Do not paste paid source.
+
 ## Checklist before shipping UI
 
 - [ ] Inter, semibold headings, medium body
-- [ ] 8px radius (`rounded-lg`)
+- [ ] 6px radius (`rounded-lg`), nothing over 8px
 - [ ] Tight padding (no `p-6` cards)
-- [ ] Greyscale surfaces; one accent only
-- [ ] Checked `ember` / `sun` / `ice`
+- [ ] Greyscale surfaces; white accent on dark
 - [ ] Dark default still readable in light
 - [ ] Keyboard + visible focus
 - [ ] Reused an existing primitive

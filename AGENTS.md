@@ -1,3 +1,5 @@
+Read DESIGN.md. Search the catalog (`node scripts/find.mjs <query>` or `catalog/components.json`). Open `local_path` under `components/external` and import that file. Apply the tokens in `app/globals.css`. BoardUI Pro is paid and has no source in this repo.
+
 <!-- BEGIN:nextjs-agent-rules -->
 
 # This is NOT the Next.js you know
@@ -14,8 +16,8 @@ This repository is a **design kit**, not a demo farm. When you write UI for Call
 
 ## Always
 
-1. Read [`TUTORIAL.md`](./TUTORIAL.md) (rounding, Inter, tight padding, accents), then [`DESIGN.md`](./DESIGN.md).
-2. Reuse `components/ui/*` (shadcn / Base UI, MIT) before inventing markup.
+1. Read [`DESIGN.md`](./DESIGN.md), then [`TUTORIAL.md`](./TUTORIAL.md) for spacing examples.
+2. Reuse `components/ui/*` and `components/kit/*` before inventing markup. If the pattern is missing, search the catalog and import `local_path` from `components/external`.
 3. Product screens wrap in `AppShell`. For AI surfaces, reuse `components/kit/*`.
 4. If a pattern is missing, **wrap** an existing primitive. Do not add a second button.
 5. Keep motion off unless the task asks for it. Sidebar collapse is the exception (150ms).
@@ -26,8 +28,7 @@ This repository is a **design kit**, not a demo farm. When you write UI for Call
 - Restyle the token sheet to “make it pop”
 - Add purple, a second brand, or `rounded-2xl` chrome
 - Add emojis, eyebrows, Pro tips, or long helper copy
-- Dump third-party sites into `/components`
-- Dump third-party sites into `/components`
+- Paste BoardUI Pro or other paid source into this repo
 - Mix another primitive system (Radix) into Base UI surfaces
 - Animate keyboard-driven or high-frequency actions
 

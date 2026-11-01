@@ -2,7 +2,7 @@
 
 Read this before drawing any screen. Then read [`DESIGN.md`](./DESIGN.md) for the longer taste file.
 
-This is the checklist future agents should follow: **Inter**, **8px rounding**, **tight padding**, **greyscale + one settable accent**.
+This is the checklist future agents should follow: **Inter**, **6px rounding**, **tight padding**, **greyscale + white accent**.
 
 The live example is the faux dashboard at `/`. The component gallery is `/kit`.
 
@@ -25,9 +25,9 @@ The live example is the faux dashboard at `/`. The component gallery is `/kit`.
 
 ---
 
-## 2. Rounding — 8px everywhere
+## 2. Rounding — 6px, 8px ceiling
 
-`--radius` is **8px**. Tailwind `rounded-lg` / `rounded-md` both resolve to 8px in this repo.
+`--radius` is **6px**. `rounded-lg` is 6px. `rounded-xl` and larger are capped at **8px**.
 
 | Surface | Class |
 | --- | --- |
@@ -65,19 +65,11 @@ Dense SaaS, not a marketing page.
 
 ---
 
-## 4. Color — greyscale + one accent
+## 4. Color — greyscale, white accent
 
-Surfaces, text, borders: **no chroma**. White / grey / near-black only.
+Surfaces, text, borders: **no chroma**. Near-black canvas, layered greys, white text.
 
-Chroma lives in **one** accent, switched with `data-accent` on `<html>`:
-
-| Id | Name | Gradient |
-| --- | --- | --- |
-| `ember` | Red–orangish | `--brand-from` → `--brand-to` |
-| `sun` | Yellow–orangeish | same tokens |
-| `ice` | Blue–light blue | same tokens |
-
-Set it with `useAccent()` / the sidebar swatches. Never hard-code orange hex in a component.
+The accent is white in dark mode and near-black in light mode (`--brand`). No ember, sun, ice, or purple.
 
 ```tsx
 <Button variant="brand">Open</Button>
@@ -85,9 +77,7 @@ Set it with `useAccent()` / the sidebar swatches. Never hard-code orange hex in 
 <div className="bg-brand-gradient" />
 ```
 
-Sparklines and primary CTAs use the accent **gradient**. Status text uses `--brand`.
-
-Do not add a second accent. Do not use purple. Green is only for “Active” / done, never as brand.
+Primary CTAs use `--brand`. Destructive red is the only chroma, and only for irreversible actions.
 
 ---
 
@@ -116,7 +106,7 @@ export default function Page() {
 
 ## 6. Cards
 
-Use `Card` from `components/ui/card`. It is already tight and 8px.
+Use `Card` from `components/ui/card`. It is already tight, with a 6px radius.
 
 ```tsx
 <Card size="sm">
@@ -129,7 +119,7 @@ Use `Card` from `components/ui/card`. It is already tight and 8px.
 </Card>
 ```
 
-Hairline only: `ring-1 ring-foreground/10`. No drop shadows, no glow on the card itself. Chart strokes may use the accent gradient.
+Hairline only: `ring-1 ring-foreground/10`. No drop shadows, no glow on the card itself. Chart strokes use the white accent.
 
 ---
 
@@ -161,7 +151,7 @@ Minimal text. Icons stay. No emojis.
 3. Grid with `gap-2` and `p-2` (same on every side).
 4. `Card` / `Card size="sm"` — do not restyle radius.
 5. Brand only through `variant="brand"`, `text-brand`, `bg-brand-gradient`.
-6. Check dark (default) and the three accent swatches.
+6. Check dark (default) and light. Accent stays white on dark.
 7. If you need a primitive, take it from `components/ui`. Chat pieces from `components/kit`.
 
 ---
@@ -170,10 +160,11 @@ Minimal text. Icons stay. No emojis.
 
 | File | What |
 | --- | --- |
-| `app/globals.css` | Greyscale tokens, 8px radius, accent palettes |
-| `lib/accent.ts` | `ember` / `sun` / `ice` |
+| `app/globals.css` | Greyscale tokens, 6px radius, white accent |
+| `catalog/components.json` | EasyUI + BoardUI index, with `local_path` |
+| `components/external/` | Vendored free source |
 | `components/kit/app-shell.tsx` | Shell |
-| `components/kit/app-sidebar.tsx` | Expandable nav + accent picker |
+| `components/kit/app-sidebar.tsx` | Expandable nav |
 | `components/dash/churn-dashboard.tsx` | Faux dashboard reference |
 | `components/dash/ops-panels.tsx` | Chat, todo, and mail-in cards |
 | `DESIGN.md` | Full taste + a11y + anti-slop |

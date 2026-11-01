@@ -193,7 +193,7 @@ export function GallerySections() {
         </div>
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
           <Stage label="Type">
-            <p className="text-2xl font-semibold tracking-tight">Inter semibold, 8px radius</p>
+            <p className="text-2xl font-semibold tracking-tight">Inter semibold, 6px radius</p>
             <p className="mt-2 text-pretty text-sm text-muted-foreground">
               Body stays at the base size. Headings use text-balance. Data uses
               tabular-nums: <span className="tabular-nums">1,280.40</span>
