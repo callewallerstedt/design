@@ -119,6 +119,7 @@ import {
   ThinkingTrace,
   ToolChip,
   ToolChipStack,
+  DotWaveBackground,
 } from "@/components/kit"
 
 function Section({
@@ -683,6 +684,16 @@ export function GallerySections() {
             </Card>
           ))}
         </div>
+        <Stage label="Dot wave background" className="mt-4">
+          <div className="relative isolate h-56 overflow-hidden rounded-lg bg-background">
+            <DotWaveBackground />
+            <div className="relative flex h-full items-end p-4">
+              <p className="text-xs text-muted-foreground">
+                DotWaveBackground — dots stay dim; a liquid field lights curved, shifting regions.
+              </p>
+            </div>
+          </div>
+        </Stage>
         <Stage label="Code to copy" className="mt-4">
           <CodeBlock
             language="css"

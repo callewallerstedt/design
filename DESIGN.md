@@ -104,6 +104,8 @@ From Emil Kowalski, *You Don’t Need Animations*, plus UI Skills `baseline-ui`:
 
 **Chat / agent** (`components/kit`): ChatThread, ChatMessage, MarkdownBubble, Composer, ToolChip, StatusChip, ThinkingTrace, ApprovalCard, TaskRow, CodeBlock.
 
+**Backgrounds** (`components/kit`): `DotWaveBackground` — dim greyscale dot grid whose brightness is a slow, liquid interference field that ripples and morphs (not a straight band). Place behind a `relative` parent. Honours `prefers-reduced-motion` and pauses when off-screen.
+
 **External libraries** (`components/external`): free EasyUI and BoardUI source. Search with `node scripts/find.mjs <query>`. Import the `local_path`. BoardUI Pro is paid and is not in the repo.
 
 ## Restyle EasyUI and BoardUI
